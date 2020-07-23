@@ -1,5 +1,5 @@
 #+IMPORTANT: -*- mode: org -*-
-#+title: Index
+#+title: Benjamin Hansen's Portfolio
 #+language: en
 #+options: H:4 num:nil toc:nil \n:nil @:t ::t |:t ^:t *:t TeX:t LaTeX:t
 #+options: html-postamble:nil
@@ -13,62 +13,47 @@
 
   https://benjamminhansen.github.io/Portfolio/
 
-* Read and Learn
-See the change
-  To get maximum time-management benefit, you are encouraged to:
-  - track your time for each task (TODO);
-  - mark each task DONE when done (type t to toggle its state); and
-  - maintain a time-tracking summary report.
+#+begin_src elisp :results silent 
+  (require 'git) ; for git commands  
+  (defun commit-and-push-to-repo (&optional file-to-commit commit-message) 
+    (or file-to-commit (setq file-to-commit "docs/index.html")) 
+    (or commit-message (setq commit-message "New upload.")) 
+    (git-add file-to-commit) 
+    (git-commit commit-message file-to-commit) 
+    (git-fetch "origin") 
+    (git-push "origin" "master")) 
+#+end_src
 
-  With your cursor on a TODO line, comma I (, I) runs the =org-clock-in=
-  command, and comma O (, O) runs the =org-clock-out= command.
-
-  Afterwards, clicking/confirming the link below will insert a table with a
-  clock report right below the link. Once inserted, running the link again
-  (which can also be done by hitting the Return/Enter key with the cursor in the
-  link) will update the table. For your convenience, this link will appear in
-  every file.
-
-  [[elisp:(org-clock-report 1)][Insert/Update Clock Summary Report]]
-
-  For example, the bullets below specify two tasks you can practice on. For more
-  advice, see the [[file:time-considerations.txt][time-considerations.txt]] file.
-
-* TODO Reading Assignment
-  Read the textbook\rsquo{}s introductory material (everything before ABC --- which
-  means everything up to and including section ONE subsubsection ONI, which ends
-  just when subsection ABC begins).
-
-  Take notes, inserting them here.
-
-* TODO Export to See Formatted File
-  If you want to see what your file will look like when formatted like The Book,
-  run the link below:
-
-
-  Note that, again for your convenience, one of these links will appear in every
-  file.
-
-* How To Avoid MIsery
-  Take Care of the Mechanics! (And yes, the MI in MIsery was intentional!)
-
-  Do you take pride in your writing? Enough to free it of *mechanical
-  infelicities* (MIs --- e.g., misspelled words, grammatical errors, punctuation
-  errors, formatting errors)?
-
-  Even if you are hard pressed to produce good solutions, you can always take
-  steps to eliminate MIs in the solutions you do write up, for example:
-
-  1. Spell-check and grammar-check your writing. (Have you heard of Grammarly?)
-  2. Read your writing aloud (or better yet, have someone else read it to you)
-     to see how it sounds.
-  3. Have someone who is good at English carefully proofread your writing.
-#+BEGIN_QUOTE
-  Besides a mathematical inclination, an exceptionally good mastery of one\rsquo{}s
-  native tongue is the most vital asset of a competent programmer.
-#+END_QUOTE
-  That quote was from a [[https://www.cs.utexas.edu/users/EWD/transcriptions/EWD04xx/EWD498.html][manuscript written by a giant of computer science]], BTW.
-
+* TODO About
+*** TODO Profile Picture
+*** TODO Self Introduction
+** TODO External Links
+*** TODO Link to LinkedIn
+*** TODO Link to Personal Github
+** TODO References
+*** TODO Lee Barney
+*** TODO John Batty
+*** TODO Others...
+* TODO Side Projects
+** TODO Research & Creative Works Conference
+** TODO Fractional Library
+** TODO Automation of Summer Workflow
+* TODO Class Projects
+** TODO Project Manager for Team of 3, Bit-by-Bit
+** TODO Discrete Mathematics
+** TODO Mathematica for a Physics Project
+** TODO Machine Learning Data Manipulation, Emotion
+** TODO Back Pain Reading Times
+*** TODO Design the Study
+*** TODO Collect the Data
+*** TODO Describe the Data
+*** TODO Make Inference
+*** TODO Take Action
+** TODO Team Lead for Team of 5 in Class-wide Project
+* TODO Graduation Plans
+*** TODO July 2021
+*** TODO Internship
+*** TODO Senior Project
 * How To Install the Source Code Pro Fonts
   Simplified from the https://github.com/adobe-fonts/source-code-pro source:
 
