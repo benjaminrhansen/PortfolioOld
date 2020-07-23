@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-07-23 Thu 14:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Index</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Benjamin Hansen" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">document.helps = [];</script>
+<script type="text/javascript">
+function draw(levels) {
+var c = document.getElementById("btree");
+var w = c.width;
+var h = c.height;
+var ctx = c.getContext("2d");
+var repeat_delay = 3000;
+var teardown_delay = 1000;
+var level_delay = 500;
+var margins = 10;
+// If h_frac is changed, slope will need to be adjusted to
+// prevent overlap.  I might fix this in the future.
+var h_frac = 2;
+var slope = ((h - margins * 2) / 2) / (w - margins * 2);
+ctx.clearRect(0, 0, w, h);
+// This goes in here so that above variables will be in scope
+function lines(dist, loc, depth, delay=0) {
+function render_lines(dist, loc) {
+ctx.beginPath();
+ctx.moveTo(loc[0], loc[1]);
+ctx.lineTo(loc[0] + dist, loc[1] + slope * -dist);
+ctx.moveTo(loc[0], loc[1]);
+ctx.lineTo(loc[0] + dist, loc[1] + slope * dist);
+ctx.stroke();
+}
+setTimeout(render_lines, delay, dist, loc);
+setTimeout(function (x) {ctx.clearRect(x, 0, w, h)},
+level_delay * levels * 2 + teardown_delay - delay,
+loc[0]);
+depth--;
+if (depth) {
+lines((dist / h_frac) * (h_frac - 1),
+[loc[0] + dist, loc[1] + slope * -dist],
+depth,
+delay + level_delay);
+lines((dist / h_frac) * (h_frac - 1),
+[loc[0] + dist, loc[1] + slope *  dist],
+depth,
+delay + level_delay);
+}
+}
+lines((w - margins * 2) / h_frac, [margins, h/2], levels);
+setTimeout(draw, repeat_delay + teardown_delay + levels * level_delay * 2, levels);
+}
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Index</h1>
+<p>
+-<b>- mode: org -</b>-
+</p>
+
+<div id="outline-container-orgdc5bad0" class="outline-2">
+<h2 id="orgdc5bad0">Read and Learn</h2>
+<div class="outline-text-2" id="text-orgdc5bad0">
+<p>
+See the change
+  To get maximum time-management benefit, you are encouraged to:
+</p>
+<ul class="org-ul">
+<li>track your time for each task (TODO);</li>
+<li>mark each task DONE when done (type t to toggle its state); and</li>
+<li>maintain a time-tracking summary report.</li>
+</ul>
+
+<p>
+With your cursor on a TODO line, comma I (, I) runs the <code>org-clock-in</code>
+command, and comma O (, O) runs the <code>org-clock-out</code> command.
+</p>
+
+<p>
+Afterwards, clicking/confirming the link below will insert a table with a
+clock report right below the link. Once inserted, running the link again
+(which can also be done by hitting the Return/Enter key with the cursor in the
+link) will update the table. For your convenience, this link will appear in
+every file.
+</p>
+
+<p>
+<a href="(org-clock-report 1)">Insert/Update Clock Summary Report</a>
+</p>
+
+<p>
+For example, the bullets below specify two tasks you can practice on. For more
+advice, see the <a href="time-considerations.txt">time-considerations.txt</a> file.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga32e754" class="outline-2">
+<h2 id="orga32e754"><span class="todo TODO">TODO</span> Reading Assignment</h2>
+<div class="outline-text-2" id="text-orga32e754">
+<p>
+Read the textbook&rsquo;s introductory material (everything before ABC &#x2014; which
+means everything up to and including section ONE subsubsection ONI, which ends
+just when subsection ABC begins).
+</p>
+
+<p>
+Take notes, inserting them here.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabf43f9" class="outline-2">
+<h2 id="orgabf43f9"><span class="todo TODO">TODO</span> Export to See Formatted File</h2>
+<div class="outline-text-2" id="text-orgabf43f9">
+<p>
+If you want to see what your file will look like when formatted like The Book,
+run the link below:
+</p>
+
+
+<p>
+Note that, again for your convenience, one of these links will appear in every
+file.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd9d324" class="outline-2">
+<h2 id="orgcd9d324">How To Avoid MIsery</h2>
+<div class="outline-text-2" id="text-orgcd9d324">
+<p>
+Take Care of the Mechanics! (And yes, the MI in MIsery was intentional!)
+</p>
+
+<p>
+Do you take pride in your writing? Enough to free it of <b>mechanical
+infelicities</b> (MIs &#x2014; e.g., misspelled words, grammatical errors, punctuation
+errors, formatting errors)?
+</p>
+
+<p>
+Even if you are hard pressed to produce good solutions, you can always take
+steps to eliminate MIs in the solutions you do write up, for example:
+</p>
+
+<ol class="org-ol">
+<li>Spell-check and grammar-check your writing. (Have you heard of Grammarly?)</li>
+<li>Read your writing aloud (or better yet, have someone else read it to you)
+to see how it sounds.</li>
+<li>Have someone who is good at English carefully proofread your writing.</li>
+</ol>
+<blockquote>
+<p>
+Besides a mathematical inclination, an exceptionally good mastery of one&rsquo;s
+native tongue is the most vital asset of a competent programmer.
+</p>
+</blockquote>
+<p>
+That quote was from a <a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD04xx/EWD498.html">manuscript written by a giant of computer science</a>, BTW.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdef6b10" class="outline-2">
+<h2 id="orgdef6b10">How To Install the Source Code Pro Fonts</h2>
+<div class="outline-text-2" id="text-orgdef6b10">
+<p>
+Simplified from the <a href="https://github.com/adobe-fonts/source-code-pro">https://github.com/adobe-fonts/source-code-pro</a> source:
+</p>
+
+<p>
+Download and unzip <a href="https://rickneff.github.io/source-code-pro-true-type-font-files-plus-windows-installer.zip">this .zip file</a>:
+</p>
+</div>
+
+<div id="outline-container-orgc488699" class="outline-3">
+<h3 id="orgc488699">MacOs</h3>
+<div class="outline-text-3" id="text-orgc488699">
+<p>
+Use the Font Book app, and Add Fonts from the folder created by unzipping.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa7c2c5" class="outline-3">
+<h3 id="orgaa7c2c5">Linux</h3>
+<div class="outline-text-3" id="text-orgaa7c2c5">
+<p>
+You&rsquo;re on your own for which program to use, but having that program read the
+.ttf files (that you unzipped) will probably work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1070941" class="outline-3">
+<h3 id="org1070941">Windows</h3>
+<div class="outline-text-3" id="text-org1070941">
+<p>
+Use the files you unzipped. Here are the instructions extracted from
+<a href="https://rickneff.github.io/fontreg-2.1.3-redist.zip">https://rickneff.github.io/fontreg-2.1.3-redist.zip</a>:
+</p>
+
+<p>
+If you&#x2026;
+</p>
+
+<p>
+&#x2026;run FontReg.exe without any command-line switches:
+</p>
+
+<ul class="org-ul">
+<li>FontReg will remove any stale font registrations in the registry.</li>
+<li>FontReg will repair any missing font registrations for fonts located in
+the C:\Windows\Fonts directory (this step will be skipped for .fon fonts if
+FontReg cannot determine which fonts should have "hidden" registrations).</li>
+</ul>
+
+<p>
+&#x2026;run FontReg.exe with the /copy or /move switch:
+</p>
+
+<ul class="org-ul">
+<li>FontReg will install all files with a .fon, .ttf, .ttc, or .otf file
+extension located in the CURRENT DIRECTORY (which might not necessarily be
+the directory in which FontReg is located).  Installation will entail
+copying/moving the files to C:\Windows\Fonts and then registering the fonts.</li>
+<li>FontReg will remove any stale font registrations in the registry.</li>
+<li>FontReg will repair any missing font registrations for fonts located in
+the C:\Windows\Fonts directory (this step will be skipped for .fon fonts if
+FontReg cannot determine which fonts should have "hidden" registrations).</li>
+</ul>
+
+<p>
+FontReg.exe is intended as a replacement for Microsoft's outdated fontinst.exe,
+and like fontinst.exe, FontReg.exe is fully silent&#x2013;it will not print messages,
+pop up dialogs, etc.; the process exit code will be 0 if there was no error.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

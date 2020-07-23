@@ -6,7 +6,15 @@
 #+startup: showeverything entitiespretty
 #+setupfile: theme-bigblow.setup
 
+* Publish                                                          :noexport:
+  [[elisp:(browse-url-of-file (org-html-export-to-html))][Export to HTML and Browse]]
+  [[elisp:(org-html-export-to-html)][Export to HTML]]
+  [[elisp:(rename-file%20"index.html"%20"docs/"%20t)][Move to docs]]
+
+  https://benjamminhansen.github.io/Portfolio/
+
 * Read and Learn
+See the change
   To get maximum time-management benefit, you are encouraged to:
   - track your time for each task (TODO);
   - mark each task DONE when done (type t to toggle its state); and
@@ -37,7 +45,6 @@
   If you want to see what your file will look like when formatted like The Book,
   run the link below:
 
-  [[elisp:(browse-url-of-file (org-html-export-to-html))][Export to HTML and Browse]]
 
   Note that, again for your convenience, one of these links will appear in every
   file.
