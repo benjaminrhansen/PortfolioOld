@@ -76,4 +76,101 @@ outputs, pondered what might be affecting the error given the message I was rece
 So, I had to get in to the nitty-gritty and *comment every single line*. After commenting thoroughly each little
 piece of the block, I got down to almost the last little bit without any idea what might have been wrong and found the bug.
 I thought, what is this doing here? How did it still run once and then quit. It was very weird. After deleting that extra unneeded stuff, it worked.
-*** TODO Code Snippet before and after
+*** TODO Code Snippet before
+// keep prompting for the desired order until the reamainingGoals array is
+// empty
+const todaysOrderedGoals =
+until(
+([remainingGoals,_p,_t]) => remainingGoals.length == 0,
+    ([remainingGoals, priority, todaysOrderedGoals]) => {
+const nextPrioritizedGoal =
+untilSubmission(function() {
+return app.chooseFromList(remainingGoals.map(Goal => Goal["goal"]), {
+withTitle: "It's Your Choice",
+withPrompt: "Prioritize the next goal for your calendar:",
+defaultItems: [remainingGoals[0]["goal"]],
+multipleSelectionsAllowed: false,
+emptySelectionAllowed: false,
+okButtonName: "Prioritize",
+cancelButtonName: "Retry"
+});
+},chooseFromListRetry)[0];
+const Goal = remainingGoals.find(Goal => Goal["goal"] === nextPrioritizedGoal);
+Goal["priority"] = priority; // change the Goal's priority to the current priority accumulator
+app.displayDialog(JSON.stringify(Goal));
+todaysOrderedGoals.push(Goal);
+app.displayDialog(JSON.stringify(todaysOrderedGoals));
+return [remainingGoals.filter(Goal => Goal["goal"] !== nextPrioritizedGoal),
+priority + 1,
+todaysOrderedGoals];
+}, [todaysGoals, 1, []])[2];
+*** TODO Code Snippet after
+// keep prompting for the desired order until the reamainingGoals array is
+// empty
+// not the most efficient way. Too many mappings, one for each iteration....
+// loop until the reaminingGoals length == 0, then we have no more elements so we should stop
+// looping
+const todaysOrderedGoals =
+until(
+// the condition function to call on each iteration
+// takes in the accumulator and returns true/false
+// destructuring-bind the 3-element list of the remainingGals, the priority which we don't care about, as well as the todaysOrderedGoals which we also don't care about
+// This function receives one argument and calls length on the remaining goals
+([remainingGoals,_p,_t]) => remainingGoals.length == 0, // is the length of the goals array zero?
+// the main function to call on each iteration. Takes in an acumulator and returns the next value for the accumulator
+// descturing-bind the 3-element list for remainingGoals, priority, and ordered goal list we are building
+// define the function as...
+    ([remainingGoals, priority, todaysOrderedGoals]) => {
+// for debugging purposes
+//app.displayDialog("Going in: ".concat(JSON.stringify(remainingGoals)));
+// get the next prioritized goal (a string of the goal name)
+const nextPrioritizedGoal =
+// until submission will return a list of goals
+// since only one item will be in the list, like we want, choose the first
+// goal
+// loop until the submission is complete (the user didn't hit "retry"
+untilSubmission(function() {
+// we must return or else undefined will be returned for this function
+// call the chooseFromList function like we usually do
+// redundantly map the remainingGoals list to be a list of strings each iteration
+return app.chooseFromList(remainingGoals.map(Goal => Goal["goal"]), {
+// the title for the dialog
+withTitle: "It's Your Choice",
+// the prompt for the dialog
+withPrompt: "Prioritize the next goal for your calendar:",
+// the default selected item should be the first goal of the remainingGoals list
+defaultItems: [remainingGoals[0]["goal"]],
+// we shouldn't be allowed to select more than one element
+multipleSelectionsAllowed: false,
+// selecting no elements is not allowed
+emptySelectionAllowed: false,
+// make the okay button say this
+okButtonName: "Prioritize",
+// make the cancel button say this
+cancelButtonName: "Retry"
+});
+// give the untilSubmission function the chooseFromListRetry function which
+// returns true if the result was false (meaning the user "cancelled" the dialog)
+},chooseFromListRetry)[0]; // get the goal out of the single-element list
+// get the goal from the remaining goals list that matches the user's desired prioritized goal
+// used find without any extra optional parameters
+// give it a simple function which takes in a Goal parameter (object) and see's if the goal's
+// name is equal to the nextPrioritizedGoal. If so, return that object!
+const Goal = remainingGoals.find(Goal => Goal["goal"] === nextPrioritizedGoal);
+// set priority and push into array
+Goal["priority"] = priority; // change the Goal's priority to the current priority accumulator
+app.displayDialog(JSON.stringify(Goal));
+todaysOrderedGoals.push(Goal); // push the goal into the ordered goals array of objects
+app.displayDialog(JSON.stringify(todaysOrderedGoals));
+// return the list for the accumulator
+// increment the priority
+// this confusing logic filters the remaining goals list for the goals that are not
+// the goal the user wants to prioritize
+return [remainingGoals.filter(Goal => Goal["goal"] !== nextPrioritizedGoal),
+// increment the priority accumulator
+priority + 1,
+// keep track of our building up of the goals array
+todaysOrderedGoals];
+// end of main function for until. For the initial value of the accumulator,
+// give todaysGoals list with the first goal as priority one and the empty list to build the ordered goals from
+}, [todaysGoals, 1, []])[2]; // return from the until returned list the third item, the ordered goals!
