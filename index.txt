@@ -7,11 +7,6 @@
 #+setupfile: theme-bigblow.setup
 
 * Publish                                                          :noexport:
-  [[elisp:(browse-url-of-file (org-html-export-to-html))][Export to HTML and Browse]]
-  [[elisp:(org-html-export-to-html)][Export to HTML]]
-  [[elisp:(rename-file%20"index.html"%20"docs/"%20t)][Move to docs]]
-
-  https://benjamminhansen.github.io/Portfolio/
 
 #+begin_src elisp :results silent 
   (require 'git) ; for git commands  
@@ -23,6 +18,22 @@
     (git-fetch "origin") 
     (git-push "origin" "master")) 
 #+end_src
+#+begin_src elisp :results silent
+  (defun push-all ()
+    (commit-and-push-to-repo "index.txt")
+    (commit-and-push-to-repo) ;; docs/index.html
+  )
+#+end_src
+
+** Links
+
+  [[elisp:(browse-url-of-file (org-html-export-to-html))][Export to HTML and Browse]]
+  [[elisp:(org-html-export-to-html)][Export to HTML]]
+  [[elisp:(rename-file%20"index.html"%20"docs/"%20t)][Move to docs]]
+  [[elisp:(push-all)][Push all necessary files to repo]]
+
+  https://benjamminhansen.github.io/Portfolio/
+
 
 * TODO About
 *** TODO Profile Picture
@@ -66,42 +77,3 @@ So, I had to get in to the nitty-gritty and *comment every single line*. After c
 piece of the block, I got down to almost the last little bit without any idea what might have been wrong and found the bug.
 I thought, what is this doing here? How did it still run once and then quit. It was very weird. After deleting that extra unneeded stuff, it worked.
 *** TODO Code Snippet before and after
-* How To Install the Source Code Pro Fonts                                       :no_export:
-  Simplified from the https://github.com/adobe-fonts/source-code-pro source:
-
-  Download and unzip [[https://rickneff.github.io/source-code-pro-true-type-font-files-plus-windows-installer.zip][this .zip file]]:
-
-** MacOs
-   Use the Font Book app, and Add Fonts from the folder created by unzipping.
-
-** Linux
-   You\rsquo{}re on your own for which program to use, but having that program read the
-   .ttf files (that you unzipped) will probably work.
-
-** Windows
-   Use the files you unzipped. Here are the instructions extracted from
-   [[https://rickneff.github.io/fontreg-2.1.3-redist.zip]]:
-
-   If you...
-
-   ...run FontReg.exe without any command-line switches:
-
-  + FontReg will remove any stale font registrations in the registry.
-  + FontReg will repair any missing font registrations for fonts located in
-    the C:\Windows\Fonts directory (this step will be skipped for .fon fonts if
-    FontReg cannot determine which fonts should have "hidden" registrations).
-
-  ...run FontReg.exe with the /copy or /move switch:
-
-  + FontReg will install all files with a .fon, .ttf, .ttc, or .otf file
-    extension located in the CURRENT DIRECTORY (which might not necessarily be
-    the directory in which FontReg is located).  Installation will entail
-    copying/moving the files to C:\Windows\Fonts and then registering the fonts.
-  + FontReg will remove any stale font registrations in the registry.
-  + FontReg will repair any missing font registrations for fonts located in
-    the C:\Windows\Fonts directory (this step will be skipped for .fon fonts if
-    FontReg cannot determine which fonts should have "hidden" registrations).
-
-  FontReg.exe is intended as a replacement for Microsoft's outdated fontinst.exe,
-  and like fontinst.exe, FontReg.exe is fully silent--it will not print messages,
-  pop up dialogs, etc.; the process exit code will be 0 if there was no error.
