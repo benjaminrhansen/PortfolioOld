@@ -54,7 +54,19 @@
 *** TODO July 2021
 *** TODO Internship
 *** TODO Senior Project
-* How To Install the Source Code Pro Fonts
+* Blog
+** <2020-07-24 Fri>
+*** Debugging
+Today I was doing quick coding in JavaScript, working on my Summer side project you can view here: [[https://benjamminhansen.github.io/Portfolio/#outline-container-org2df7e47][Automate Summer Workflow]].
+It was all going fairly well until I created a whole block of code I understood logically would work (or should, because it made
+since to me) but it didn't. It would work on the first loop, and then not on any of the others. I was so confused. I displayed some
+outputs, pondered what might be affecting the error given the message I was receiving. I made some minor changes, and still - the same bug prevailed.
+
+So, I had to get in to the nitty-gritty and *comment every single line*. After commenting thoroughly each little
+piece of the block, I got down to almost the last little bit without any idea what might have been wrong and found the bug.
+I thought, what is this doing here? How did it still run once and then quit. It was very weird. After deleting that extra unneeded stuff, it worked.
+*** TODO Code Snippet before and after
+* How To Install the Source Code Pro Fonts                                       :no_export:
   Simplified from the https://github.com/adobe-fonts/source-code-pro source:
 
   Download and unzip [[https://rickneff.github.io/source-code-pro-true-type-font-files-plus-windows-installer.zip][this .zip file]]:
