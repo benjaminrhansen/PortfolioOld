@@ -32,7 +32,7 @@
   [[elisp:(rename-file%20"index.html"%20"docs/"%20t)][Move to docs]]
   [[elisp:(push-all)][Push all necessary files to repo]]
 
-  https://benjamminhansen.github.io/Portfolio/
+  [[https://benjaminrhansen.github.io/Portfolio/]]
 
 
 * TODO About
