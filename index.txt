@@ -46,9 +46,8 @@
 *** TODO John Batty
 *** TODO Others...
 * TODO Side Projects
-** TODO Research & Creative Works Conference
-** TODO Fractional Library
 ** TODO Automation of Summer Workflow
+** TODO Hangman.app
 * TODO Class Projects
 ** TODO Project Manager for Team of 3, Bit-by-Bit
 ** TODO Discrete Mathematics
@@ -61,6 +60,10 @@
 *** TODO Make Inference
 *** TODO Take Action
 ** TODO Team Lead for Team of 5 in Class-wide Project
+* TODO Research
+** TODO Research & Creative Works Conference
+** TODO Fractional Library
+** TODO Multithreading: How many threads? - White Paper
 * TODO Graduation Plans
 *** TODO July 2021
 *** TODO Internship
