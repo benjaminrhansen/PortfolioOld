@@ -38,6 +38,7 @@
 * TODO About
 *** TODO Profile Picture
    file:./WhitePaper.pdf
+   file:./LaTeX_logo_huge.png
 *** TODO Self Introduction
 ** TODO External Links
 *** TODO Link to LinkedIn
