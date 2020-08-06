@@ -37,6 +37,7 @@
 
 * TODO About
 *** TODO Profile Picture
+   file:./WhitePaper.pdf
 *** TODO Self Introduction
 ** TODO External Links
 *** TODO Link to LinkedIn
@@ -80,33 +81,47 @@ So, I had to get in to the nitty-gritty and *comment every single line*. After c
 piece of the block, I got down to almost the last little bit without any idea what might have been wrong and found the bug.
 I thought, what is this doing here? How did it still run once and then quit. It was very weird. After deleting that extra unneeded stuff, it worked.
 *** TODO Code Snippet before
-// keep prompting for the desired order until the reamainingGoals array is
-// empty
-const todaysOrderedGoals =
-until(
-([remainingGoals,_p,_t]) => remainingGoals.length == 0,
-    ([remainingGoals, priority, todaysOrderedGoals]) => {
-const nextPrioritizedGoal =
-untilSubmission(function() {
-return app.chooseFromList(remainingGoals.map(Goal => Goal["goal"]), {
-withTitle: "It's Your Choice",
-withPrompt: "Prioritize the next goal for your calendar:",
-defaultItems: [remainingGoals[0]["goal"]],
-multipleSelectionsAllowed: false,
-emptySelectionAllowed: false,
-okButtonName: "Prioritize",
-cancelButtonName: "Retry"
-});
-},chooseFromListRetry)[0];
-const Goal = remainingGoals.find(Goal => Goal["goal"] === nextPrioritizedGoal);
-Goal["priority"] = priority; // change the Goal's priority to the current priority accumulator
-app.displayDialog(JSON.stringify(Goal));
-todaysOrderedGoals.push(Goal);
-app.displayDialog(JSON.stringify(todaysOrderedGoals));
-return [remainingGoals.filter(Goal => Goal["goal"] !== nextPrioritizedGoal),
-priority + 1,
-todaysOrderedGoals];
-}, [todaysGoals, 1, []])[2];
+#+begin_src erlang :module stuff
+-export([start/0]).
+start()->
+  case 5 of
+    5 -> io:format("~w~n",[5])
+  end.
+#+end_src
+
+#+results:
+: 5
+file:.
+
+#+begin_src js
+  // keep prompting for the desired order until the reamainingGoals array is
+  // empty
+  const todaysOrderedGoals =
+        until(
+            ([remainingGoals,_p,_t]) => remainingGoals.length == 0,
+                ([remainingGoals, priority, todaysOrderedGoals]) => {
+                const nextPrioritizedGoal =
+                      untilSubmission(function() {
+                          return app.chooseFromList(remainingGoals.map(Goal => Goal["goal"]), {
+                              withTitle: "It's Your Choice",
+                              withPrompt: "Prioritize the next goal for your calendar:",
+                              defaultItems: [remainingGoals[0]["goal"]],
+                              multipleSelectionsAllowed: false,
+                              emptySelectionAllowed: false,
+                              okButtonName: "Prioritize",
+                              cancelButtonName: "Retry"
+                          });
+                      },chooseFromListRetry)[0];
+                const Goal = remainingGoals.find(Goal => Goal["goal"] === nextPrioritizedGoal);
+                Goal["priority"] = priority; // change the Goal's priority to the current priority accumulator
+                app.displayDialog(JSON.stringify(Goal));
+                todaysOrderedGoals.push(Goal);
+                app.displayDialog(JSON.stringify(todaysOrderedGoals));
+                return [remainingGoals.filter(Goal => Goal["goal"] !== nextPrioritizedGoal),
+                        priority + 1,
+                        todaysOrderedGoals];
+            }, [todaysGoals, 1, []])[2];
+#+end_src
 *** TODO Code Snippet after
 // keep prompting for the desired order until the reamainingGoals array is
 // empty
