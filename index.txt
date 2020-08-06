@@ -8,15 +8,16 @@
 
 * Publish                                                          :noexport:
 
-#+begin_src elisp :results silent 
+#+begin_src elisp :results silent
   (require 'git) ; for git commands  
-  (defun commit-and-push-to-repo (&optional file-to-commit commit-message) 
-    (or file-to-commit (setq file-to-commit "docs/index.html")) 
-    (or commit-message (setq commit-message "New upload.")) 
-    (git-add file-to-commit) 
-    (git-commit commit-message file-to-commit) 
-    (git-fetch "origin") 
-    (git-push "origin" "master")) 
+  (defun commit-and-push-to-repo (&optional file-to-commit commit-message)
+    (setq commit-message (or commit-message "New upload."))
+    (setq file-to-commit (or file-to-commit "docs/index.html"))
+    (let ((git-repo "."))
+      (git-add file-to-commit)
+      (git-commit commit-message file-to-commit)
+      (git-fetch "origin")
+      (git-push "origin" "master")))
 #+end_src
 #+begin_src elisp :results silent
   (defun push-all ()
@@ -24,18 +25,25 @@
     (commit-and-push-to-repo) ;; docs/index.html
   )
 #+end_src
+#+begin_src elisp
+  (push-all)
+#+end_src
+
+#+results:
+: To github.com:benjaminrhansen/Portfolio.git
+:    52ce71f..144d82f  master -> master
 
 ** Links
 
   [[elisp:(browse-url-of-file (org-html-export-to-html))][Export to HTML and Browse]]
   [[elisp:(org-html-export-to-html)][Export to HTML]]
-  [[elisp:(rename-file%20"index.html"%20"docs/"%20t)][Move to docs]]
+  [[elisp:(rename-file "index.html" "docs/" t)][Move to docs]]
   [[elisp:(push-all)][Push all necessary files to repo]]
 
   [[https://benjaminrhansen.github.io/Portfolio/]]
 
-
 * TODO About
+\(\LaTeX\)
 *** TODO Profile Picture
    file:./WhitePaper.pdf
    file:./LaTeX_logo_huge.png
