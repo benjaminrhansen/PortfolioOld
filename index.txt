@@ -40,7 +40,7 @@
 
 * TODO About
 *** TODO Profile Picture
-  [[file:linkedinprofilecircle.png][Benjamin Hansen]]
+  [[file:linkedinprofilecircle.png][file:linkedinprofilecircle.png]]
 *** TODO Self Introduction
 ** TODO External Links
 *** TODO Link to LinkedIn
