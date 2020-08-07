@@ -23,9 +23,10 @@
 #+begin_src elisp :results silent
   (defun push-all ()
     (commit-and-push-to-repo "index.txt")
-    (commit-and-push-to-repo) ;; docs/index.html
+    ;(commit-and-push-to-repo) ;; docs/index.html
   )
 #+end_src
+Here
 #+begin_src elisp :results code
   (push-all)
 #+end_src
