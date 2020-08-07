@@ -40,6 +40,7 @@
 
 * TODO About
 *** TODO Profile Picture
+  [[file:linkedinprofilecircle.png][Benjamin Hansen]]
 *** TODO Self Introduction
 ** TODO External Links
 *** TODO Link to LinkedIn
@@ -78,7 +79,7 @@
 * Blog
 ** <2020-07-24 Fri>
 *** Debugging
-Today I was doing quick coding in JavaScript, working on my Summer side project you can view here: [[https://benjamminhansen.github.io/Portfolio/#outline-container-org2df7e47][Automate Summer Workflow]].
+Today I was doing quick coding in JavaScript, working on my Summer side project you can view here: [[https://benjaminrhansen.github.io/Portfolio/#outline-container-org4ad206c][Automate Summer Workflow]].
 It was all going fairly well until I created a whole block of code I understood logically would work (or should, because it made
 since to me) but it didn't. It would work on the first loop, and then not on any of the others. I was so confused. I displayed some
 outputs, pondered what might be affecting the error given the message I was receiving. I made some minor changes, and still - the same bug prevailed.
