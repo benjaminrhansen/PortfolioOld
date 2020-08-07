@@ -39,7 +39,6 @@
   [[https://benjaminrhansen.github.io/Portfolio/]]
 
 * TODO About
-*** TODO Profile Picture
   [[file:linkedinprofilecircle.png][file:linkedinprofilecircle.png]]
 *** TODO Self Introduction
 ** TODO External Links
