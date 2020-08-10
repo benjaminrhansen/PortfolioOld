@@ -61,14 +61,14 @@
 
 
 
-** TODO References
+** TODO References                                                 :noexport:
 *** TODO Lee Barney
 *** TODO John Batty
 *** TODO Others...
-* TODO Side Projects
-** TODO Automation of Summer Workflow
+* TODO Side Projects                                               :noexport:
+** TODO Automation of Summer Workflo
 ** TODO Hangman.app
-* TODO Class Projects
+* TODO Class Projects                                              :noexport:
 ** TODO Project Manager for Team of 3, Bit-by-Bit
 ** TODO Discrete Mathematics
 ** TODO Mathematica for a Physics Project
@@ -80,7 +80,7 @@
 *** TODO Make Inference
 *** TODO Take Action
 ** TODO Team Lead for Team of 5 in Class-wide Project
-* TODO Research
+* TODO Research                                                    :noexport:
 ** TODO Research & Creative Works Conference
 ** TODO Fractional Library
 ** TODO Multithreading: How many threads? - White Paper
@@ -88,7 +88,7 @@
 
    Here is the file for the white paper:
    file:./WhitePaper.pdf
-* TODO Graduation Plans
+* TODO Graduation Plans                                            :noexport:
 *** TODO July 2021
 *** TODO Internship
 *** TODO Senior Project
@@ -103,7 +103,7 @@ outputs, pondered what might be affecting the error given the message I was rece
 So, I had to get in to the nitty-gritty and *comment every single line*. After commenting thoroughly each little
 piece of the block, I got down to almost the last little bit without any idea what might have been wrong and found the bug.
 I thought, what is this doing here? How did it still run once and then quit. It was very weird. After deleting that extra unneeded stuff, it worked.
-*** TODO Code Snippet before
+*** Code Snippet before
 #+begin_src js
   // keep prompting for the desired order until the reamainingGoals array is
   // empty
@@ -133,7 +133,7 @@ I thought, what is this doing here? How did it still run once and then quit. It 
                         todaysOrderedGoals];
             }, [todaysGoals, 1, []])[2];
 #+end_src
-*** TODO Code Snippet after
+*** Code Snippet after
 #+begin_src js
   // keep prompting for the desired order until the reamainingGoals array is
   // empty
