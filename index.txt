@@ -80,10 +80,10 @@
 *** TODO Make Inference
 *** TODO Take Action
 ** TODO Team Lead for Team of 5 in Class-wide Project
-* TODO Research                                                    :noexport:
-** TODO Research & Creative Works Conference
-** TODO Fractional Library
-** TODO Multithreading: How many threads? - White Paper
+* TODO Research
+** TODO Research & Creative Works Conference                       :noexport:
+** TODO Fractional Library                                         :noexport:
+** Multithreading: How many threads? - White Paper
    In my Operating Systems class, our final project was a research paper on how many threads are needed for a given program to maximize performance.
 
    Here is the file for the white paper:
