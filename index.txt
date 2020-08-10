@@ -30,8 +30,13 @@
       (git-push "origin" "master")))
 #+end_src
 #+begin_src elisp
-  (commit-and-push-all "testing")
+  (commit-and-push-all)
 #+end_src
+
+#+results:
+: To github.com:benjaminrhansen/Portfolio.git
+:    3f1dca6..9bf8a64  master -> master
+
 ** Links
 
   [[elisp:(browse-url-of-file (org-html-export-to-html))][Export to HTML and Browse]]
@@ -39,7 +44,7 @@
   [[elisp:(org-html-export-to-html)][Export to HTML]]
   [[elisp:(rename-file "index.html" "docs/" t)][Move to docs]]
   [[elisp:(copy-file%20"../Resumes/BenjaminRHansenResume.pdf"%20"docs/"%20t)][Copy Resume PDF to docs]]
-  Commit & Push All
+  [[elisp:(commit-and-push-all)][Commit & Push All Possible New Files]]
 
   [[https://benjaminrhansen.github.io/Portfolio/]]
 
@@ -53,7 +58,7 @@
   I've also used my C++ knowledge in 5 semesters of courses. After learning Python during my Machine Learning course, I learned R within a short span of time to do the final project. I feel confident I can learn any software and accomplish any task given to me.
 
 ** TODO External Links
-| [[https://linkedin.com/in/benjaminrhansen][LinkedIn Profile]]  | file:./BenjaminRHansenResume.pdf | [[https://github.com/benjaminrhansen][GitHub Profile]]  |
+| [[https://linkedin.com/in/benjaminrhansen][LinkedIn Profile]]  | [[file:BenjaminRHansenResume.pdf][Resume]] | [[https://github.com/benjaminrhansen][GitHub Profile]]  |
 
 
 
