@@ -18,40 +18,45 @@
       (git-commit commit-message file-to-commit)
       (git-fetch "origin")
       (git-push "origin" "master")))
-
 #+end_src
 #+begin_src elisp :results silent
-  (defun push-all ()
-    (commit-and-push-to-repo "index.txt")
-    ;(commit-and-push-to-repo) ;; docs/index.html
-  )
+  (defun commit-and-push-all (&optional commit-message)
+    (setq commit-message (or commit-message "New Upload."))
+    (let ((git-repo "."))
+      (copy-file "../Resumes/BenjaminRHansenResume.pdf" "docs/BenjaminRHansenResume.pdf" t)
+      (git-add "docs/index.html" "docs/BenjaminRHansenResume.pdf" "index.txt")
+      (git-commit commit-message "docs/index.html" "docs/BenjaminRHansenResume.pdf" "index.txt")
+      (git-fetch "origin")
+      (git-push "origin" "master")))
 #+end_src
-Here
-#+begin_src elisp :results code
-  (push-all)
-#+end_src
-
-#+results:
 #+begin_src elisp
-"To github.com:benjaminrhansen/Portfolio.git\n   9b7d74f..b540320  master -> master\n"
+  (commit-and-push-all "testing")
 #+end_src
-
 ** Links
 
   [[elisp:(browse-url-of-file (org-html-export-to-html))][Export to HTML and Browse]]
   Save first
   [[elisp:(org-html-export-to-html)][Export to HTML]]
   [[elisp:(rename-file "index.html" "docs/" t)][Move to docs]]
-  [[elisp:(push-all)][Push all necessary files to repo]]
+  [[elisp:(copy-file%20"../Resumes/BenjaminRHansenResume.pdf"%20"docs/"%20t)][Copy Resume PDF to docs]]
+  Commit & Push All
 
   [[https://benjaminrhansen.github.io/Portfolio/]]
 
 * TODO About
-  [[file:linkedinprofilecircle.png][file:linkedinprofilecircle.png]]
+  [[file:linkedinprofilecircle.png][file:./linkedinprofilecircle.png]]
 *** TODO Self Introduction
+  Hi! I'm Benjamin Hansen. I am from Southern Utah. I became interested in computer science in high school where I took 5 computer courses. I went on a mission for my church, [[https://churchofjesuschrist.org][The Church of Jesus Christ of Latter-day Saints]], worked construction for 4 months, and then started my Bachelor's of Science in Computer Science at [[https://www.byui.edu/][Brigham Young University - Idaho]]. I chose Computer Science because I found I liked from my web design and development course and programming course in high school. What really brought me confidence that I could do well in this field was from acheiving the highest grade on the final exam of my programming class.
+
+  Ever since, programming paradigms and concepts have come easily to me. I can quickly learn languages and write programs in them. What I really love is Erlang. I feel like Erlang is almost as easy as Python. My initial solution to a problem is not hard to implement in Erlang, whereas in other languages it may take many revisions to my initial solution to solve the problem. I've created many modules with many functions in Erlang, for a class and on my free time. I prefer doing mathematical alogirhtms and functions in Erlang. I love its scalability and simplicity.
+
+  I've also used my C++ knowledge in 5 semesters of courses. After learning Python during my Machine Learning course, I learned R within a short span of time to do the final project. I feel confident I can learn any software and accomplish any task given to me.
+
 ** TODO External Links
-*** TODO Link to LinkedIn
-*** TODO Link to Personal Github
+| [[https://linkedin.com/in/benjaminrhansen][LinkedIn Profile]]  | file:./BenjaminRHansenResume.pdf | [[https://github.com/benjaminrhansen][GitHub Profile]]  |
+
+
+
 ** TODO References
 *** TODO Lee Barney
 *** TODO John Batty
