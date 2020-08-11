@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-08-10 Mon 13:23 -->
+<!-- 2020-08-11 Tue 16:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Benjamin Hansen's Portfolio</title>
@@ -301,9 +301,9 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Benjamin Hansen's Portfolio</h1>
 
-<div id="outline-container-org4e9fdfb" class="outline-2">
-<h2 id="org4e9fdfb">About</h2>
-<div class="outline-text-2" id="text-org4e9fdfb">
+<div id="outline-container-orgda1d3bd" class="outline-2">
+<h2 id="orgda1d3bd">About</h2>
+<div class="outline-text-2" id="text-orgda1d3bd">
 
 <div class="figure">
 <p><a href="linkedinprofilecircle.png"><img src="./linkedinprofilecircle.png" alt="linkedinprofilecircle.png" /></a>
@@ -328,52 +328,1081 @@ for the JavaScript code in this tag.
 </tbody>
 </table>
 </div>
-<div id="outline-container-org7d94961" class="outline-4">
-<h4 id="org7d94961">Self Introduction</h4>
-<div class="outline-text-4" id="text-org7d94961">
+</div>
+<div id="outline-container-org9447f82" class="outline-2">
+<h2 id="org9447f82">Side Projects</h2>
+<div class="outline-text-2" id="text-org9447f82">
+</div>
+<div id="outline-container-orgb03bdad" class="outline-3">
+<h3 id="orgb03bdad">Automation of Summer Workflow</h3>
+<div class="outline-text-3" id="text-orgb03bdad">
 <p>
-Hi! I'm Benjamin Hansen. I am from Southern Utah. I became interested in computer science in high school where I took 5 computer courses. I went on a mission for my church, <a href="https://churchofjesuschrist.org">The Church of Jesus Christ of Latter-day Saints</a>, worked construction for 4 months, and then started my Bachelor's of Science in Computer Science at <a href="https://www.byui.edu/">Brigham Young University - Idaho</a>. I chose Computer Science because I found I liked from my web design and development course and programming course in high school. What really brought me confidence that I could do well in this field was from acheiving the highest grade on the final exam of my programming class.
+This summmer I didn't work like last because of COVID-19 and my desire to prepare for my future. I had a long list of goals I wanted to acchomplish and skills I wanted to refine. Here are just a few of them:
+</p>
+
+<ul class="org-ul">
+<li>Prepare for Calculus II: Refine my knowledge of Calculus</li>
+<li>Increase Job Skills: Learn whatever I need to learn to be more attractive to employers, like Docker, Kubernetes, and Erlang Fault-tolerance.</li>
+<li>Learn Physics: Prepare myself for a future career in Quantum Information Theory.</li>
+</ul>
+
+<p>
+But I was worried. If I don't make a schedule, I won't do work on some goals because I'll get caught on others and forget to switch contexts. On the other hand, if I make my schedule and then something comes up I didn't expect, I fall behind on my goals and end up just continuing the current goal I'm on and throwing away the rest. To avoid both of those traps, I automated my workflow so each day I can specify which goals I want to work on, any miscelleneous events or goals I need to do, and for how long so that each day is customed to what is going on then. For example, I can't have a repeating schedule because I don't always start the day at the same time.
 </p>
 
 <p>
-Ever since, programming paradigms and concepts have come easily to me. I can quickly learn languages and write programs in them. What I really love is Erlang. I feel like Erlang is almost as easy as Python. My initial solution to a problem is not hard to implement in Erlang, whereas in other languages it may take many revisions to my initial solution to solve the problem. I've created many modules with many functions in Erlang, for a class and on my free time. I prefer doing mathematical alogirhtms and functions in Erlang. I love its scalability and simplicity.
+I ended up making a series of apps written in JavaScript, the most crucial one being the Dynamic Schedule app, which allows me to use the basic interface features of my Macbook Pro and create my schedule which is then saved in my calendar. I read from a JSON my desired recurring and miscelleneous goals, and then allow the user (myself) to choose from the list of goals a subset that I want to work on. Then, one by one I can choose which to prioritize first (higher priority goals will be scheduled first). I can add miscelleneous goals and events, with custom time durations and they are automatically saved to my calendar for that day. The nice thing I also coded was keeping track of miscelleneous goal.
 </p>
 
 <p>
-I've also used my C++ knowledge in 5 semesters of courses. After learning Python during my Machine Learning course, I learned R within a short span of time to do the final project. I feel confident I can learn any software and accomplish any task given to me.
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-orga191da9" class="outline-2">
-<h2 id="orga191da9"><span class="todo TODO">TODO</span> Research</h2>
-<div class="outline-text-2" id="text-orga191da9">
-</div>
-<div id="outline-container-org749b618" class="outline-3">
-<h3 id="org749b618">Multithreading: How many threads? - White Paper</h3>
-<div class="outline-text-3" id="text-org749b618">
-<p>
-In my Operating Systems class, our final project was a research paper on how many threads are needed for a given program to maximize performance.
+Let's say I wanted to create a simple but fun Macbook Pro game, using the Script Editor (which I used for these JavaScript apps) but I ran out of time for that day to finish it. My memory is not all powerful, so there is a good chance the next day I'll forget I had that goal. The scheduling app saves all miscelleneous goals I add to a JSON so then on the next day when I go to schedule my daily plan, it will show me that I had that goal.
 </p>
 
 <p>
-Here is the file for the white paper:
-<a href="./WhitePaper.pdf">./WhitePaper.pdf</a>
+All of this helped me tons in staying on track to acheiving my goals from Aug. to mid Sept. of 2020.
 </p>
 </div>
+<div id="outline-container-org69f89ec" class="outline-4">
+<h4 id="org69f89ec">DynamicSchedule.scpt</h4>
+<div class="outline-text-4" id="text-org69f89ec">
+<div class="org-src-container">
+<pre class="src src-js">  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">knowledge: all functions return something, either undefined if no return keyword</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">is used, or what is returned. Use the "return" keyword! Ugh... wish it would</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">just return what was last said</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Setup</span>
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">app</span> = Application.currentApplication<span style="color: #4f97d7;">()</span>;
+app.includeStandardAdditions = <span style="color: #a45bad;">true</span>;
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">to read/write, from https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReadandWriteFiles.html</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">if needed</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">readFile</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">file</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Convert the file to a string</span>
+    <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">fileString</span> = file.toString<span style="color: #bc6ec5;">()</span>;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">app.displayDialog(fileString);</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Read the file and return its contents</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> app.read<span style="color: #bc6ec5;">(</span>Path<span style="color: #2d9574;">(</span>fileString<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">used for miscJSON.txt</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">writeTextToFile</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">text</span>, <span style="color: #7590db;">file</span>, <span style="color: #7590db;">overwriteExistingContent</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Convert the file to a string</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">fileString</span> = file.toString<span style="color: #2d9574;">()</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Open the file for writing</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">openedFile</span> = app.openForAccess<span style="color: #2d9574;">(</span>Path<span style="color: #67b11d;">(</span>fileString<span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span> writePermission: <span style="color: #a45bad;">true</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Clear the file if content should be overwritten</span>
+        <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>overwriteExistingContent<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            app.setEof<span style="color: #67b11d;">(</span>openedFile, <span style="color: #b1951d;">{</span> to: <span style="color: #a45bad;">0</span> <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Write the new content to the file</span>
+        app.write<span style="color: #2d9574;">(</span>text, <span style="color: #67b11d;">{</span> to: openedFile, startingAt: app.getEof<span style="color: #b1951d;">(</span>openedFile<span style="color: #b1951d;">)</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+        app.closeAccess<span style="color: #2d9574;">(</span>openedFile<span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was successful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">true</span>;
+    <span style="color: #bc6ec5;">}</span>
+    <span style="color: #4f97d7; font-weight: bold;">catch</span> <span style="color: #bc6ec5;">(</span>error<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+            app.closeAccess<span style="color: #67b11d;">(</span>file<span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+        <span style="color: #4f97d7; font-weight: bold;">catch</span><span style="color: #2d9574;">(</span>error<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Report the error is closing failed</span>
+            console.log<span style="color: #67b11d;">(</span><span style="color: #2d9574;">`Couldn't close file: ${error}`</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was unsuccessful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">false</span>;
+    <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">simulate saving an event</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">simulateSavingEvent</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">eventStart</span>, <span style="color: #7590db;">duration</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">eventEnd</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Date</span><span style="color: #bc6ec5;">(</span>eventStart.getTime<span style="color: #2d9574;">()</span><span style="color: #bc6ec5;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">make it an end date!</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">time overflows will be taken care of in the set functions</span>
+  eventEnd.setHours<span style="color: #bc6ec5;">(</span>eventStart.getHours<span style="color: #2d9574;">()</span> + duration.hour<span style="color: #bc6ec5;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">in military time</span>
+  eventEnd.setMinutes<span style="color: #bc6ec5;">(</span>eventStart.getMinutes<span style="color: #2d9574;">()</span> + duration.minute<span style="color: #bc6ec5;">)</span>;
+  eventEnd.setSeconds<span style="color: #bc6ec5;">(</span>eventStart.getSeconds<span style="color: #2d9574;">()</span> + duration.second<span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> eventEnd;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">saves an event to my calendar</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">saveEvent</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">eventTitle</span>, <span style="color: #7590db;">eventStart</span>, <span style="color: #7590db;">duration</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">eventEnd</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Date</span><span style="color: #bc6ec5;">(</span>eventStart.getTime<span style="color: #2d9574;">()</span><span style="color: #bc6ec5;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">make it an end date!</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">time overflows will be taken care of in the set functions</span>
+  eventEnd.setHours<span style="color: #bc6ec5;">(</span>eventStart.getHours<span style="color: #2d9574;">()</span> + duration.hour<span style="color: #bc6ec5;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">in military time</span>
+  eventEnd.setMinutes<span style="color: #bc6ec5;">(</span>eventStart.getMinutes<span style="color: #2d9574;">()</span> + duration.minute<span style="color: #bc6ec5;">)</span>;
+  eventEnd.setSeconds<span style="color: #bc6ec5;">(</span>eventStart.getSeconds<span style="color: #2d9574;">()</span> + duration.second<span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">projectCalendars</span> = Calendar.calendars.whose<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">{</span>name: <span style="color: #2d9574;">"benjamminhansen@gmail.com"</span><span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">projectCalendar</span> = projectCalendars<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span>;
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">event</span> = Calendar.Event<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">{</span>summary: eventTitle, startDate: eventStart, endDate: eventEnd, description: Object.values<span style="color: #67b11d;">(</span>duration<span style="color: #67b11d;">)</span>.reduce<span style="color: #67b11d;">(</span><span style="color: #b1951d;">(</span>str, time<span style="color: #b1951d;">)</span> =&gt; <span style="color: #b1951d;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">strTime</span> = time.toString<span style="color: #4f97d7;">()</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">may only be one char</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">see if we need to pad the number with a zero</span>
+    <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>strTime.length == <span style="color: #a45bad;">1</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+      strTime = <span style="color: #2d9574;">"0"</span> + strTime;
+    <span style="color: #4f97d7;">}</span>
+    str += strTime + <span style="color: #2d9574;">":"</span>;
+    <span style="color: #4f97d7; font-weight: bold;">return</span> str;
+  <span style="color: #b1951d;">}</span>, <span style="color: #2d9574;">""</span><span style="color: #67b11d;">)</span>.slice<span style="color: #67b11d;">(</span><span style="color: #a45bad;">0</span>,-<span style="color: #a45bad;">1</span><span style="color: #67b11d;">)</span><span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">slice off last hanging ':' */</span><span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">)</span>;
+  projectCalendar.events.push<span style="color: #bc6ec5;">(</span>event<span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> eventEnd; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return the end date of this event we saved</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">generate an inclusive integer range from the first value of incrementor to the end</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">range</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">incrementor</span>, <span style="color: #7590db;">end</span>, <span style="color: #7590db;">numbers</span> = <span style="color: #bc6ec5;">[]</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>incrementor &gt; end<span style="color: #bc6ec5;">)</span> <span style="color: #4f97d7; font-weight: bold;">return</span> numbers;
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">add a new element with the bracket operator</span>
+  numbers<span style="color: #bc6ec5;">[</span>numbers.length<span style="color: #bc6ec5;">]</span> = incrementor;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> range<span style="color: #bc6ec5;">(</span>incrementor + <span style="color: #a45bad;">1</span>, end, numbers<span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">from https://stackoverflow.com/questions/4856717/javascript-equivalent-of-pythons-zip-function</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">zip</span> = rows =&gt; rows<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>.map<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span>_,c<span style="color: #bc6ec5;">)</span>=&gt;rows.map<span style="color: #bc6ec5;">(</span>row=&gt;row<span style="color: #2d9574;">[</span>c<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">sorting function for the sort method</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">sortOnPriority</span> = <span style="color: #4f97d7;">(</span>goal1, goal2<span style="color: #4f97d7;">)</span>=&gt;goal1<span style="color: #4f97d7;">[</span><span style="color: #2d9574;">"priority"</span><span style="color: #4f97d7;">]</span> - goal2<span style="color: #4f97d7;">[</span><span style="color: #2d9574;">"priority"</span><span style="color: #4f97d7;">]</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">not used</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">mapInputToObjectayAndSort</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">desiredOrder</span>, <span style="color: #7590db;">objectay</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">return</span> zip<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>objectay, desiredOrder<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span>.reduce<span style="color: #bc6ec5;">(</span>
+    <span style="color: #2d9574;">(</span>accumList, <span style="color: #67b11d;">[</span>Goal, priority<span style="color: #67b11d;">]</span><span style="color: #2d9574;">)</span>=&gt; <span style="color: #2d9574;">{</span>
+      Goal<span style="color: #67b11d;">[</span><span style="color: #2d9574;">"priority"</span><span style="color: #67b11d;">]</span> = priority;
+      accumList.push<span style="color: #67b11d;">(</span>Goal<span style="color: #67b11d;">)</span>;
+      <span style="color: #4f97d7; font-weight: bold;">return</span> accumList
+    <span style="color: #2d9574;">}</span>, <span style="color: #2d9574;">[]</span><span style="color: #bc6ec5;">)</span>.sort<span style="color: #bc6ec5;">(</span>sortOnPriority<span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">map the string of numbers to a list of actual numbers</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">stringToNumberList</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">stringOfNumbers</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">delimeter must be a single comma</span>
+  <span style="color: #4f97d7; font-weight: bold;">return</span> stringOfNumbers.split<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">","</span><span style="color: #bc6ec5;">)</span>.map<span style="color: #bc6ec5;">(</span>StringNumber =&gt; parseInt<span style="color: #2d9574;">(</span>StringNumber<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a high-order function to continue prompting the user for input while</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">they "haven't submitted" the form, which will be defined in the funNotSubmitted</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">lambda and called each time until it returns false, denoting the user has submitted</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">untilSubmission</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">funGetInput</span>, <span style="color: #7590db;">funNotSubmitted</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">result</span>;
+  <span style="color: #4f97d7; font-weight: bold;">do</span> <span style="color: #bc6ec5;">{</span> result = funGetInput<span style="color: #2d9574;">()</span>; <span style="color: #bc6ec5;">}</span> <span style="color: #4f97d7; font-weight: bold;">while</span> <span style="color: #bc6ec5;">(</span>funNotSubmitted<span style="color: #2d9574;">(</span>result<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> result;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">generalized until construct</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">allow for use of an accumulator</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">said, "Until condition for accumulator is true, keep calling fun"</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">until</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">condition</span>, <span style="color: #7590db;">fun</span>, <span style="color: #7590db;">accumulator</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">while the condition isn't true, keep iterating</span>
+  <span style="color: #4f97d7; font-weight: bold;">while</span><span style="color: #bc6ec5;">(</span>!condition<span style="color: #2d9574;">(</span>accumulator<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+    accumulator = fun<span style="color: #bc6ec5;">(</span>accumulator<span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> accumulator;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a fun for what is true in "not submitted" terms for</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the "chooseFromList" user interface</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">chooseFromListRetry</span> = dialogResult =&gt; dialogResult === <span style="color: #a45bad;">false</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">displayDialogRetry</span> = dialogResult =&gt; dialogResult.buttonReturned === <span style="color: #2d9574;">"Retry"</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">chooseFromListRestart</span> = dialogResult =&gt; dialogResult === <span style="color: #a45bad;">false</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">parseTime</span> = timeString =&gt; <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #bc6ec5;">{</span>hour: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">0</span>,<span style="color: #a45bad;">2</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, minute: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">3</span>,<span style="color: #a45bad;">5</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, second: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">6</span>,<span style="color: #a45bad;">8</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">}</span>; <span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">get the first property name from an object</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">not needed</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">const getFirstPropertyName = obj =&gt; Object.keys(obj)[0]; // a lambda</span>
+
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">read from the recurringGoalsJSON.txt on the Desktop the recurring goals of</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the desired user. These will be the main goals from which the user picks</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">today's specific goals</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">recurringGoals</span> = JSON.parse<span style="color: #4f97d7;">(</span>app.read<span style="color: #bc6ec5;">(</span>Path<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"/Users/benjaminhansen/Desktop/recurringGoalsJSON.txt"</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+  .sort<span style="color: #4f97d7;">(</span>sortOnPriority<span style="color: #4f97d7;">)</span>;
+
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">we will use duration times for the eventEnd date of each goal</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">miscellaneous goals is dynamic, growing and shrinking each running</span>
+<span style="color: #2aa1ae; background-color: #292e34;">/*</span>
+<span style="color: #2aa1ae; background-color: #292e34;">var goal_details = [</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Workout: Stretches &amp; Pushups",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 0, minute: 6, second: 11 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 1 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Quantum Mechanics",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 1, minute: 0, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 2 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Calculus",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 1, minute: 0, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 3 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Algorithms and Complexity",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 0, minute: 15, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 4 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Course Hero",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 0, minute: 45, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 5 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Find 7 New Resources",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 1, minute: 0, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 6 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Make 5 Contacts",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">      duration: { hour: 1, minute: 30, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 7 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Setup 1 Meeting",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 0, minute: 15, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 8 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Increase Job Skills",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: { hour: 1, minute: 0, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 9 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Build Portfolio Up",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: {hour: 1, minute: 0, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority: 10 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">  { goal: "Linear Algebra",</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    duration: {hour: 1, minute: 0, second: 0 },</span>
+<span style="color: #2aa1ae; background-color: #292e34;">    priority:11 }</span>
+<span style="color: #2aa1ae; background-color: #292e34;">];*/</span>
+
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">Calendar</span> = Application<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"Calendar"</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">read in the miscellaneous goals JSON file</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parse the miscelleneous goals from the file</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the JSON contains an ay of goals. Thus we could have more than one goal</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">sort the list based on priority</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">misc</span> = JSON.parse<span style="color: #4f97d7;">(</span>app.read<span style="color: #bc6ec5;">(</span>Path<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"/Users/benjaminhansen/Desktop/miscJSON.txt"</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+  .sort<span style="color: #4f97d7;">(</span>sortOnPriority<span style="color: #4f97d7;">)</span>;
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">app.displayDialog("Misc Sorted Goals: " + JSON.stringify(misc));</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">ask if previous miscelleneous tasks have been completed</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">completedMiscGoals</span> =
+  untilSubmission<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">function</span><span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> app.chooseFromList<span style="color: #2d9574;">(</span>misc.map<span style="color: #67b11d;">(</span>Goal =&gt; Goal.goal<span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span>
+      withTitle: <span style="color: #2d9574;">"It's Your Choice"</span>,
+      withPrompt: <span style="color: #2d9574;">"Which misc. goals have you completed?"</span>,
+      defaultItems: <span style="color: #b1951d;">[]</span>,
+      multipleSelectionsAllowed: <span style="color: #a45bad;">true</span>,
+      emptySelectionAllowed: <span style="color: #a45bad;">true</span>,
+      okButtonName: <span style="color: #2d9574;">"Submit"</span>,
+      cancelButtonName: <span style="color: #2d9574;">"Retry"</span>
+    <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+  <span style="color: #bc6ec5;">}</span>, chooseFromListRetry<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">does the user have any misc goals to add</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">hasMiscGoalsToAdd</span> = app.displayDialog<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"Do you have any misc. goals to add?"</span>, <span style="color: #bc6ec5;">{</span>
+  withTitle: <span style="color: #2d9574;">"Misc. Goals"</span>,
+  buttons: <span style="color: #2d9574;">[</span><span style="color: #2d9574;">"No"</span>,<span style="color: #2d9574;">"Yes"</span><span style="color: #2d9574;">]</span>,
+  defaultButton: <span style="color: #2d9574;">"Yes"</span>
+<span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>.buttonReturned == <span style="color: #2d9574;">"Yes"</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">may be empty. if the user hasMiscGoalsToAdd, then call the until function, else return the empty list</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">newMiscGoals</span> =  hasMiscGoalsToAdd ?
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">until the user is done creating misc. goals to work on, keep prompting</span>
+  until<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>_m, _p, lastGoalDialogSubmission<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> =&gt; lastGoalDialogSubmission.buttonReturned === <span style="color: #2d9574;">"I'm Done"</span>,
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the main function</span>
+    <span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>miscGoals, priority, _<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> =&gt; <span style="color: #bc6ec5;">{</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">two prompts. 1: What is the goal name to attach priority to</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">//        </span><span style="color: #2aa1ae; background-color: #292e34;">2: What is the time duration of the goal (hh:mm:ss)</span>
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 1 for the goal name</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">goalName</span> = untilSubmission<span style="color: #2d9574;">(</span><span style="color: #67b11d;">()</span> =&gt; app.displayDialog<span style="color: #67b11d;">(</span><span style="color: #2d9574;">"Enter Goal Title"</span>, <span style="color: #b1951d;">{</span>
+        withTitle: <span style="color: #2d9574;">"New Misc. Goal"</span>,
+        defaultAnswer: <span style="color: #2d9574;">""</span>,
+        withIcon: <span style="color: #2d9574;">"note"</span>,
+        buttons: <span style="color: #4f97d7;">[</span><span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Next"</span><span style="color: #4f97d7;">]</span>,
+        defaultButton: <span style="color: #2d9574;">"Next"</span>
+      <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>, displayDialogRetry<span style="color: #2d9574;">)</span>.textReturned;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 2 for the goal's time duration (hh:mm:ss)</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parseTime parses text of the form (hh:mm:ss) and returns an object</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">of the form {hour: hh, minute: mm, second: ss}</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">gross code to create a lambda and call it!</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">func</span> = <span style="color: #2d9574;">()</span> =&gt; <span style="color: #2d9574;">{</span>
+        <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpResponse</span> = untilSubmission<span style="color: #67b11d;">(</span><span style="color: #b1951d;">()</span> =&gt; app.displayDialog<span style="color: #b1951d;">(</span><span style="color: #2d9574;">`Enter Time Duration for ${goalName} (in hh:mm:ss format):`</span>, <span style="color: #4f97d7;">{</span>
+          withTitle: <span style="color: #2d9574;">"New Misc. Goal"</span>,
+          defaultAnswer: <span style="color: #2d9574;">"hh:mm:ss"</span>,
+          withIcon: <span style="color: #2d9574;">"note"</span>,
+          buttons: <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">"I'm Done"</span>, <span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Create Another"</span><span style="color: #bc6ec5;">]</span>,
+          defaultButton: <span style="color: #2d9574;">"Create Another"</span>
+        <span style="color: #4f97d7;">}</span><span style="color: #b1951d;">)</span>, displayDialogRetry<span style="color: #67b11d;">)</span>;
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parse the time given by the text response</span>
+        <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpTime</span> = parseTime<span style="color: #67b11d;">(</span>tmpResponse.textReturned<span style="color: #67b11d;">)</span>;
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #67b11d;">[</span>tmpTime, tmpResponse<span style="color: #67b11d;">]</span>;
+      <span style="color: #2d9574;">}</span>
+      <span style="color: #2d9574;">[</span>goalDuration, goalDurationPromptResult<span style="color: #2d9574;">]</span> = func<span style="color: #2d9574;">()</span>;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">add to the list the new goal</span>
+      miscGoals.push<span style="color: #2d9574;">(</span><span style="color: #67b11d;">{</span>goal: goalName, duration: goalDuration, priority: priority<span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return the updated list, an increasing priority, and the submission</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">of the goalDurationPromptResult</span>
+      <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">[</span>miscGoals, priority + <span style="color: #a45bad;">1</span>, goalDurationPromptResult<span style="color: #2d9574;">]</span>;
+    <span style="color: #bc6ec5;">}</span>, <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">[]</span>, <span style="color: #a45bad;">1</span>, <span style="color: #2d9574;">{</span>buttonReturned: <span style="color: #2d9574;">""</span><span style="color: #2d9574;">}</span> <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">for compatability reasons */</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span> : <span style="color: #4f97d7;">[]</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return the accumulated list, or if no goals to add, the empty list</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">app.displayDialog(`New Misc. Goals: ${JSON.stringify(newMiscGoals)}`);</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">filter the goal_details.misc accordingly</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">miscGoalsToSave</span> = misc.filter<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">function</span><span style="color: #bc6ec5;">(</span><span style="color: #7590db;">Goal</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return true if the Goal's goal title is not in the completedMiscGoals</span>
+  <span style="color: #4f97d7; font-weight: bold;">return</span> !completedMiscGoals.includes<span style="color: #2d9574;">(</span>Goal.goal<span style="color: #2d9574;">)</span>;
+<span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>.concat<span style="color: #4f97d7;">(</span>newMiscGoals<span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">add the new goals the user entered</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">let me define the break between each event</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">breakTime</span> = <span style="color: #a45bad;">0</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">make this functional</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Keep prompting until satisfied</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">define the not submitted function to be false if the return of the</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">first function returned false. False for a chooseFromList denotes the user</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">cancelled with the cancelButton</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">todaysMainGoalChoices</span> =
+  untilSubmission<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">function</span><span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> app.chooseFromList<span style="color: #2d9574;">(</span>recurringGoals.map<span style="color: #67b11d;">(</span>Goal =&gt; Goal.goal<span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span>
+      withTitle: <span style="color: #2d9574;">"It's Your Choice"</span>,
+        withPrompt: <span style="color: #2d9574;">"Select the recurring goals you want to work on today:"</span>,
+        defaultItems: <span style="color: #b1951d;">[]</span>,
+      multipleSelectionsAllowed: <span style="color: #a45bad;">true</span>,
+      emptySelectionAllowed: <span style="color: #a45bad;">true</span>,
+      okButtonName: <span style="color: #2d9574;">"Submit"</span>,
+      cancelButtonName: <span style="color: #2d9574;">"Retry"</span>
+    <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+  <span style="color: #bc6ec5;">}</span>, chooseFromListRetry<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">filter the main goals to the one's I want to do today</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">todaysMainGoals</span> = recurringGoals.filter<span style="color: #4f97d7;">(</span>Goal =&gt; todaysMainGoalChoices.includes<span style="color: #bc6ec5;">(</span>Goal.goal<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>;
+
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">miscGoalChoices</span> =
+  untilSubmission<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">function</span><span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> app.chooseFromList<span style="color: #2d9574;">(</span>miscGoalsToSave.map<span style="color: #67b11d;">(</span>Goal =&gt; Goal.goal<span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span>
+      withTitle: <span style="color: #2d9574;">"It's Your Choice"</span>,
+      withPrompt: <span style="color: #2d9574;">"Select the misc. goals you want to work on today:"</span>,
+      defaultItems: <span style="color: #b1951d;">[]</span>,
+      multipleSelectionsAllowed: <span style="color: #a45bad;">true</span>,
+      emptySelectionAllowed: <span style="color: #a45bad;">true</span>,
+      okButtonName: <span style="color: #2d9574;">"Submit"</span>,
+      cancelButtonName: <span style="color: #2d9574;">"Retry"</span>
+    <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+  <span style="color: #bc6ec5;">}</span>, chooseFromListRetry<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">maintain a miscGoals array of objects</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">set priorities for these goals starting at the length of today's main goals</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">+ 1</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">todaysMiscGoals</span> = miscGoalsToSave.filter<span style="color: #4f97d7;">(</span>Goal =&gt; miscGoalChoices.includes<span style="color: #bc6ec5;">(</span>Goal.goal<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>.reduce<span style="color: #4f97d7;">(</span>
+    <span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>prioritizedGoals, priority<span style="color: #2d9574;">]</span>, Goal<span style="color: #bc6ec5;">)</span> =&gt; <span style="color: #bc6ec5;">{</span>
+      Goal<span style="color: #2d9574;">[</span><span style="color: #2d9574;">"priority"</span><span style="color: #2d9574;">]</span> = priority;
+      prioritizedGoals.push<span style="color: #2d9574;">(</span>Goal<span style="color: #2d9574;">)</span>;
+      <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">[</span>prioritizedGoals, priority + <span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span>;
+<span style="color: #bc6ec5;">}</span>, <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">[]</span>, todaysMainGoals.length + <span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return first element of list</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Now, finally determine all the goals I want to work on.</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">todaysGoals</span> = todaysMainGoals.concat<span style="color: #4f97d7;">(</span>todaysMiscGoals<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">if the goals are emtpy, don't continue</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">we can indent this later...</span>
+<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>todaysGoals.length<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">now all the goals are ordered, but what if the user wants a different duration</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">for some of the goals, because not all goals will take the same amount of time</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">get a selection of goals the user wants to update durations for</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">durationsToUpdate</span> = untilSubmission<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">()</span> =&gt;
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">choose from the list of currently ordered goals</span>
+    app.chooseFromList<span style="color: #2d9574;">(</span>todaysGoals.map<span style="color: #67b11d;">(</span>Goal =&gt; Goal<span style="color: #b1951d;">[</span><span style="color: #2d9574;">"goal"</span><span style="color: #b1951d;">]</span><span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span>
+      withTitle: <span style="color: #2d9574;">"Not the Usual?"</span>,
+      withPrompt: <span style="color: #2d9574;">`Which goals for today would you like to enter a different time duration for?`</span>,
+      defaultItems: <span style="color: #b1951d;">[]</span>,
+      multipleSelectionsAllowed: <span style="color: #a45bad;">true</span>,
+      emptySelectionAllowed: <span style="color: #a45bad;">true</span>,
+      okButtonName: <span style="color: #2d9574;">"Submit"</span>,
+      cancelButtonName: <span style="color: #2d9574;">"Retry"</span>
+    <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span> <span style="color: #2aa1ae; background-color: #292e34;">/*</span><span style="color: #2aa1ae; background-color: #292e34;">end first arg*/</span>, chooseFromListRetry<span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">todaysUpdatedGoals</span> = durationsToUpdate.length !== <span style="color: #a45bad;">0</span> ? <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">make sure we have goals to update</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">reduce on the durationsToUpdate list of goal names</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">start the accumulator of the updating goals with the todaysOrderedGoal</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">list. Update each goal corresponding to the name in durationsToUpdate</span>
+    durationsToUpdate.reduce<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span>updatedGoals, goalNameToUpdate<span style="color: #2d9574;">)</span> =&gt; <span style="color: #2d9574;">{</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">get the goal from the updated goals list that matches the user's</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">desired prioritized goal</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">used find without any extra optional parameters</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">give it a simple function which takes in a Goal parameter (object) and see's if the goal's</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">name is equal to the nextPrioritizedGoal. If so, return that object!</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">goalIndex</span> =  updatedGoals.findIndex<span style="color: #67b11d;">(</span>Goal =&gt; Goal<span style="color: #b1951d;">[</span><span style="color: #2d9574;">"goal"</span><span style="color: #b1951d;">]</span> === goalNameToUpdate<span style="color: #67b11d;">)</span>;
+      updatedGoals<span style="color: #67b11d;">[</span>goalIndex<span style="color: #67b11d;">]</span>.duration =
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parse the time given by the text response</span>
+        parseTime<span style="color: #67b11d;">(</span>untilSubmission<span style="color: #b1951d;">(</span><span style="color: #4f97d7;">()</span> =&gt; app.displayDialog<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">`Enter Custom Time Duration for ${goalNameToUpdate} (in hh:mm:ss format):`</span>, <span style="color: #bc6ec5;">{</span>
+            withTitle: <span style="color: #2d9574;">"Update Time Durations"</span>,
+            defaultAnswer: <span style="color: #2d9574;">"hh:mm:ss"</span>,
+            withIcon: <span style="color: #2d9574;">"note"</span>,
+            buttons: <span style="color: #2d9574;">[</span><span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Continue"</span><span style="color: #2d9574;">]</span>,
+            defaultButton: <span style="color: #2d9574;">"Continue"</span>
+          <span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>, displayDialogRetry<span style="color: #b1951d;">)</span>.textReturned<span style="color: #67b11d;">)</span>;
+      <span style="color: #4f97d7; font-weight: bold;">return</span> updatedGoals;
+    <span style="color: #2d9574;">}</span>, todaysGoals<span style="color: #bc6ec5;">)</span> : <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">else, keep the goals as is</span>
+    todaysGoals;
+
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">keep prompting for the desired order until the reamainingGoals array is</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">empty</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">not the most efficient way. Too many mappings, one for each iteration....</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">loop until the reaminingGoals length == 0, then we have no more elements so we should stop</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">looping</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">todaysPrioritizedGoals</span> =
+    until<span style="color: #bc6ec5;">(</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the condition function to call on each iteration</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">takes in the accumulator and returns true/false</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">destructuring-bind the 3-element list of the remainingGals, the priority which we don't care about, as well as the todaysOrderedGoals which we also don't care about</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">This function receives one argument and calls length on the remaining goals</span>
+      <span style="color: #2d9574;">(</span><span style="color: #67b11d;">[</span>remainingGoals,_p,_t,_n<span style="color: #67b11d;">]</span><span style="color: #2d9574;">)</span> =&gt; remainingGoals.length == <span style="color: #a45bad;">0</span>, <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">is the length of the goals array zero?</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the main function to call on each iteration. Takes in an acumulator and returns the next value for the accumulator</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">descturing-bind the 3-element list for remainingGoals, priority, and ordered goal list we are building</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">define the function as...</span>
+        <span style="color: #2d9574;">(</span><span style="color: #67b11d;">[</span>remainingGoals, priority, todaysOrderedGoals,nextOpenTime<span style="color: #67b11d;">]</span><span style="color: #2d9574;">)</span> =&gt; <span style="color: #2d9574;">{</span>
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">get the next prioritized goal (a string of the goal name)</span>
+        <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">nextPrioritizedGoalResult</span> =
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">call the chooseFromList function like we usually do</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">redundantly map the remainingGoals list to be a list of strings each iteration</span>
+          app.chooseFromList<span style="color: #67b11d;">(</span>remainingGoals.map<span style="color: #b1951d;">(</span>Goal =&gt; Goal<span style="color: #4f97d7;">[</span><span style="color: #2d9574;">"goal"</span><span style="color: #4f97d7;">]</span><span style="color: #b1951d;">)</span>, <span style="color: #b1951d;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the title for the dialog</span>
+            withTitle: <span style="color: #2d9574;">"It's Your Choice"</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the prompt for the dialog</span>
+            withPrompt: <span style="color: #2d9574;">`Next Goal Opening: ${nextOpenTime.toLocaleString().split(", ")[1]}\nPrioritize the next goal for your calendar:`</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the default selected item should be the first goal of the remainingGoals list</span>
+            defaultItems: <span style="color: #4f97d7;">[</span>remainingGoals<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">][</span><span style="color: #2d9574;">"goal"</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">]</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">we shouldn't be allowed to select more than one element</span>
+            multipleSelectionsAllowed: <span style="color: #a45bad;">false</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">selecting no elements is not allowed</span>
+            emptySelectionAllowed: <span style="color: #a45bad;">false</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">make the okay button say this</span>
+            okButtonName: <span style="color: #2d9574;">"Prioritize"</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">make the cancel button say this</span>
+            cancelButtonName: <span style="color: #2d9574;">"Insert Event"</span>
+          <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">check to see if the next prioritized goal is not false</span>
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">if not, save and return as usual</span>
+        <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #67b11d;">(</span>nextPrioritizedGoalResult !== <span style="color: #a45bad;">false</span><span style="color: #67b11d;">)</span> <span style="color: #67b11d;">{</span>
+          <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">nextPrioritizedGoal</span> = nextPrioritizedGoalResult<span style="color: #b1951d;">[</span><span style="color: #a45bad;">0</span><span style="color: #b1951d;">]</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">get the goal out of the single-element list</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">get the goal from the remaining goals list that matches the user's desired prioritized goal</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">used find without any extra optional parameters</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">give it a simple function which takes in a Goal parameter (object) and see's if the goal's</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">name is equal to the nextPrioritizedGoal. If so, return that object!</span>
+          <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">Goal</span> = remainingGoals.find<span style="color: #b1951d;">(</span>Goal =&gt; Goal<span style="color: #4f97d7;">[</span><span style="color: #2d9574;">"goal"</span><span style="color: #4f97d7;">]</span> === nextPrioritizedGoal<span style="color: #b1951d;">)</span>;
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">set priority and push into array</span>
+          Goal<span style="color: #b1951d;">[</span><span style="color: #2d9574;">"priority"</span><span style="color: #b1951d;">]</span> = priority; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">change the Goal's priority to the current priority accumulator</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">app.displayDialog(JSON.stringify(Goal));</span>
+          todaysOrderedGoals.push<span style="color: #b1951d;">(</span>Goal<span style="color: #b1951d;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">push the goal into the ordered goals array of objects</span>
+
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">determine when the next open time would be given the nextPrioritizedGoal</span>
+          <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">goalEnd</span> = simulateSavingEvent<span style="color: #b1951d;">(</span><span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Date</span><span style="color: #4f97d7;">(</span>nextOpenTime.getTime<span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>, Goal.duration<span style="color: #b1951d;">)</span>;
+
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return the list for the accumulator</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">increment the priority</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">this confusing logic filters the remaining goals list for the goals that are not</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the goal the user wants to prioritize</span>
+          <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #b1951d;">[</span>remainingGoals.filter<span style="color: #4f97d7;">(</span>Goal =&gt; Goal<span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">"goal"</span><span style="color: #bc6ec5;">]</span> !== nextPrioritizedGoal<span style="color: #4f97d7;">)</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">increment the priority accumulator</span>
+            priority + <span style="color: #a45bad;">1</span>,
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">keep track of our building up of the goals array</span>
+            todaysOrderedGoals, goalEnd<span style="color: #b1951d;">]</span>;
+        <span style="color: #67b11d;">}</span> <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">end if</span>
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">else the user wants to insert a custom event</span>
+        <span style="color: #4f97d7; font-weight: bold;">else</span> <span style="color: #67b11d;">{</span>
+
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">two prompts. 1: What is the event name to attach priority to</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">//        </span><span style="color: #2aa1ae; background-color: #292e34;">2: What is the time duration of the event (hh:mm:ss)</span>
+
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 1 for the goal name</span>
+          <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">eventName</span> = untilSubmission<span style="color: #b1951d;">(</span><span style="color: #4f97d7;">()</span> =&gt; app.displayDialog<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">`Next Event Opening: ${nextOpenTime.toLocaleString().split(", ")[1]}\nEnter Event Title`</span>, <span style="color: #bc6ec5;">{</span>
+            withTitle: <span style="color: #2d9574;">"Event - Step 1"</span>,
+            defaultAnswer: <span style="color: #2d9574;">""</span>,
+            withIcon: <span style="color: #2d9574;">"note"</span>,
+            buttons: <span style="color: #2d9574;">[</span><span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Next"</span><span style="color: #2d9574;">]</span>,
+            defaultButton: <span style="color: #2d9574;">"Next"</span>
+          <span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>, displayDialogRetry<span style="color: #b1951d;">)</span>.textReturned;
+
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 2 for the goal's time duration (hh:mm:ss)</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parseTime parses text of the form (hh:mm:ss) and returns an object</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">of the form {hour: hh, minute: mm, second: ss}</span>
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">gross code to create a lambda and call it!</span>
+          <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">func</span> = <span style="color: #b1951d;">()</span> =&gt; <span style="color: #b1951d;">{</span>
+            <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpResponse</span> = untilSubmission<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">()</span> =&gt; app.displayDialog<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">`Next Event Opening: ${nextOpenTime.toLocaleString().split(", ")[1]}\nEnter Time Duration for ${eventName} (in hh:mm:ss format):`</span>, <span style="color: #2d9574;">{</span>
+              withTitle: <span style="color: #2d9574;">"Event - Step 2"</span>,
+              defaultAnswer: <span style="color: #2d9574;">"hh:mm:ss"</span>,
+              withIcon: <span style="color: #2d9574;">"note"</span>,
+              buttons: <span style="color: #9cb6ad;">[</span><span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Submit"</span><span style="color: #9cb6ad;">]</span>,
+              defaultButton: <span style="color: #2d9574;">"Submit"</span>
+            <span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">)</span>, displayDialogRetry<span style="color: #4f97d7;">)</span>;
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parse the time given by the text response</span>
+            <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpTime</span> = parseTime<span style="color: #4f97d7;">(</span>tmpResponse.textReturned<span style="color: #4f97d7;">)</span>;
+            <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #4f97d7;">[</span>tmpTime, tmpResponse<span style="color: #4f97d7;">]</span>;
+          <span style="color: #b1951d;">}</span>
+          <span style="color: #b1951d;">[</span>eventDuration, eventDurationPromptResult<span style="color: #b1951d;">]</span> = func<span style="color: #b1951d;">()</span>;
+
+          <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">eventEnd</span> = simulateSavingEvent<span style="color: #b1951d;">(</span><span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Date</span><span style="color: #4f97d7;">(</span>nextOpenTime.getTime<span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>, eventDuration<span style="color: #b1951d;">)</span>;
+
+          <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">add to the list the new goal</span>
+          todaysOrderedGoals.push<span style="color: #b1951d;">(</span><span style="color: #4f97d7;">{</span>goal: eventName, duration: eventDuration, priority: priority<span style="color: #4f97d7;">}</span><span style="color: #b1951d;">)</span>;
+
+          <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #b1951d;">[</span>remainingGoals, priority + <span style="color: #a45bad;">1</span>, todaysOrderedGoals, eventEnd<span style="color: #b1951d;">]</span>;
+        <span style="color: #67b11d;">}</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">end of main function for until. For the initial value of the accumulator,</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">give todaysGoals list with the first goal as priority one and the empty list to build the ordered goals from</span>
+  <span style="color: #2d9574;">}</span>, <span style="color: #2d9574;">[</span>todaysUpdatedGoals, <span style="color: #a45bad;">1</span>, <span style="color: #67b11d;">[]</span>, app.currentDate<span style="color: #67b11d;">()</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)[</span><span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">]</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return from the until returned list the third item, the ordered goals!</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">todaysOrderedUpdatedGoals</span> = todaysPrioritizedGoals.sort<span style="color: #bc6ec5;">(</span>sortOnPriority<span style="color: #bc6ec5;">)</span>;
+
+
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">reduce on todaysOrderedGoals, returning the end time of the last event saved</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">save all the events, one after the other. they were ordered by priority as desired</span>
+  todaysOrderedUpdatedGoals.reduce<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span>eventStart, Goal<span style="color: #2d9574;">)</span> =&gt; <span style="color: #2d9574;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> saveEvent<span style="color: #67b11d;">(</span>Goal.goal, eventStart, Goal.duration<span style="color: #67b11d;">)</span>;
+  <span style="color: #2d9574;">}</span>, app.currentDate<span style="color: #2d9574;">()</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>
+  app.displayAlert<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"You're all set! Would you like to save your changes to the misc. goals?"</span>, <span style="color: #67b11d;">{</span>
+    as: <span style="color: #2d9574;">"informational"</span>,
+    buttons: <span style="color: #b1951d;">[</span><span style="color: #2d9574;">"No"</span>, <span style="color: #2d9574;">"Yes"</span><span style="color: #b1951d;">]</span>,
+    defaultButton: <span style="color: #2d9574;">"Yes"</span>,
+    cancelButton: <span style="color: #2d9574;">"No"</span>,
+    givingUpAfter: <span style="color: #a45bad;">10</span>
+  <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>.buttonReturned == <span style="color: #2d9574;">"Yes"</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">write the miscellaneous goals to the JSON</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">dateString</span> = Date<span style="color: #2d9574;">()</span>.toString<span style="color: #2d9574;">()</span>;
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">desktopString</span> = app.pathTo<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"desktop"</span><span style="color: #2d9574;">)</span>.toString<span style="color: #2d9574;">()</span>;
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">text</span> = <span style="color: #2d9574;">`${JSON.stringify(miscGoalsToSave)}\n`</span>;
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">file</span> = <span style="color: #2d9574;">`${desktopString}/miscJSON.txt`</span>;
+  writeTextToFile<span style="color: #2d9574;">(</span>text, file, <span style="color: #a45bad;">true</span><span style="color: #2d9574;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">true for overwrite</span>
+  <span style="color: #bc6ec5;">}</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span>
+<span style="color: #4f97d7;">}</span> <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">end for if</span>
+<span style="color: #4f97d7; font-weight: bold;">else</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>
+  app.displayAlert<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"You're all set! Would you like to save your changes to the misc. goals?"</span>, <span style="color: #67b11d;">{</span>
+    as: <span style="color: #2d9574;">"informational"</span>,
+    buttons: <span style="color: #b1951d;">[</span><span style="color: #2d9574;">"No"</span>, <span style="color: #2d9574;">"Yes"</span><span style="color: #b1951d;">]</span>,
+    defaultButton: <span style="color: #2d9574;">"Yes"</span>,
+    cancelButton: <span style="color: #2d9574;">"No"</span>,
+    givingUpAfter: <span style="color: #a45bad;">10</span>
+  <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>.buttonReturned == <span style="color: #2d9574;">"Yes"</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">write the miscellaneous goals to the JSON</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">dateString</span> = Date<span style="color: #2d9574;">()</span>.toString<span style="color: #2d9574;">()</span>;
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">desktopString</span> = app.pathTo<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"desktop"</span><span style="color: #2d9574;">)</span>.toString<span style="color: #2d9574;">()</span>;
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">text</span> = <span style="color: #2d9574;">`${JSON.stringify(miscGoalsToSave)}\n`</span>;
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">file</span> = <span style="color: #2d9574;">`${desktopString}/miscJSON.txt`</span>;
+  writeTextToFile<span style="color: #2d9574;">(</span>text, file, <span style="color: #a45bad;">true</span><span style="color: #2d9574;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">true for overwrite</span>
+  <span style="color: #bc6ec5;">}</span>
+  <span style="color: #2d9574;">"Have a fun, open day!"</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
 </div>
 </div>
-<div id="outline-container-orgef4660c" class="outline-2">
-<h2 id="orgef4660c">Blog</h2>
-<div class="outline-text-2" id="text-orgef4660c">
 </div>
-<div id="outline-container-orgb587f7b" class="outline-3">
-<h3 id="orgb587f7b"><span class="timestamp-wrapper"><span class="timestamp">&lt;2020-07-24 Fri&gt;</span></span></h3>
-<div class="outline-text-3" id="text-orgb587f7b">
+<div id="outline-container-org2d53181" class="outline-4">
+<h4 id="org2d53181">AddRecurringGoals.scpt</h4>
+<div class="outline-text-4" id="text-org2d53181">
+<div class="org-src-container">
+<pre class="src src-js">  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">app</span> = Application.currentApplication<span style="color: #4f97d7;">()</span>;
+app.includeStandardAdditions = <span style="color: #a45bad;">true</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a high-order function to continue prompting the user for input while</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">they "haven't submitted" the form, which will be defined in the funNotSubmitted</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">lambda and called each time until it returns false, denoting the user has submitted</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">untilSubmission</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">funGetInput</span>, <span style="color: #7590db;">funNotSubmitted</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">result</span>;
+  <span style="color: #4f97d7; font-weight: bold;">do</span> <span style="color: #bc6ec5;">{</span> result = funGetInput<span style="color: #2d9574;">()</span>; <span style="color: #bc6ec5;">}</span> <span style="color: #4f97d7; font-weight: bold;">while</span> <span style="color: #bc6ec5;">(</span>funNotSubmitted<span style="color: #2d9574;">(</span>result<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> result;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">generalized until construct</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">allow for use of an accumulator</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">said, "Until condition for accumulator is true, keep calling fun"</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">until</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">condition</span>, <span style="color: #7590db;">fun</span>, <span style="color: #7590db;">accumulator</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">while the condition isn't true, keep iterating</span>
+  <span style="color: #4f97d7; font-weight: bold;">while</span><span style="color: #bc6ec5;">(</span>!condition<span style="color: #2d9574;">(</span>accumulator<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+    accumulator = fun<span style="color: #bc6ec5;">(</span>accumulator<span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> accumulator;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">parseTime</span> = timeString =&gt; <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #bc6ec5;">{</span>hour: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">0</span>,<span style="color: #a45bad;">2</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, minute: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">3</span>,<span style="color: #a45bad;">5</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, second: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">6</span>,<span style="color: #a45bad;">8</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">}</span>; <span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">used for miscJSON.txt</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">writeTextToFile</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">text</span>, <span style="color: #7590db;">file</span>, <span style="color: #7590db;">overwriteExistingContent</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Convert the file to a string</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">fileString</span> = file.toString<span style="color: #2d9574;">()</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Open the file for writing</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">openedFile</span> = app.openForAccess<span style="color: #2d9574;">(</span>Path<span style="color: #67b11d;">(</span>fileString<span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span> writePermission: <span style="color: #a45bad;">true</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Clear the file if content should be overwritten</span>
+        <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>overwriteExistingContent<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            app.setEof<span style="color: #67b11d;">(</span>openedFile, <span style="color: #b1951d;">{</span> to: <span style="color: #a45bad;">0</span> <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Write the new content to the file</span>
+        app.write<span style="color: #2d9574;">(</span>text, <span style="color: #67b11d;">{</span> to: openedFile, startingAt: app.getEof<span style="color: #b1951d;">(</span>openedFile<span style="color: #b1951d;">)</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+        app.closeAccess<span style="color: #2d9574;">(</span>openedFile<span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was successful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">true</span>;
+    <span style="color: #bc6ec5;">}</span>
+    <span style="color: #4f97d7; font-weight: bold;">catch</span> <span style="color: #bc6ec5;">(</span>error<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+            app.closeAccess<span style="color: #67b11d;">(</span>file<span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+        <span style="color: #4f97d7; font-weight: bold;">catch</span><span style="color: #2d9574;">(</span>error<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Report the error is closing failed</span>
+            console.log<span style="color: #67b11d;">(</span><span style="color: #2d9574;">`Couldn't close file: ${error}`</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was unsuccessful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">false</span>;
+    <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a fun for what is true in "not submitted" terms for</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the "chooseFromList" user interface</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">chooseFromListRetry</span> = dialogResult =&gt; dialogResult === <span style="color: #a45bad;">false</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">displayDialogRetry</span> = dialogResult =&gt; dialogResult.buttonReturned === <span style="color: #2d9574;">"Retry"</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">newRecurringGoals</span> =
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">until the user is done creating misc. goals to work on, keep prompting</span>
+  until<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>_m, _p, lastGoalDialogSubmission<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> =&gt; lastGoalDialogSubmission.buttonReturned === <span style="color: #2d9574;">"I'm Done"</span>,
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the main function</span>
+    <span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>recurringGoals, priority, _<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> =&gt; <span style="color: #bc6ec5;">{</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">two prompts. 1: What is the goal name to attach priority to</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">//        </span><span style="color: #2aa1ae; background-color: #292e34;">2: What is the time duration of the goal (hh:mm:ss)</span>
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 1 for the goal name</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">goalName</span> = untilSubmission<span style="color: #2d9574;">(</span><span style="color: #67b11d;">()</span> =&gt; app.displayDialog<span style="color: #67b11d;">(</span><span style="color: #2d9574;">"Enter Goal Title"</span>, <span style="color: #b1951d;">{</span>
+        withTitle: <span style="color: #2d9574;">"New Recurring Goal - Step 1"</span>,
+        defaultAnswer: <span style="color: #2d9574;">""</span>,
+        withIcon: <span style="color: #2d9574;">"note"</span>,
+        buttons: <span style="color: #4f97d7;">[</span><span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Next"</span><span style="color: #4f97d7;">]</span>,
+        defaultButton: <span style="color: #2d9574;">"Next"</span>
+      <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>, displayDialogRetry<span style="color: #2d9574;">)</span>.textReturned;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 2 for the goal's time duration (hh:mm:ss)</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parseTime parses text of the form (hh:mm:ss) and returns an object</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">of the form {hour: hh, minute: mm, second: ss}</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">gross code to create a lambda and call it!</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">func</span> = <span style="color: #2d9574;">()</span> =&gt; <span style="color: #2d9574;">{</span>
+        <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpResponse</span> = untilSubmission<span style="color: #67b11d;">(</span><span style="color: #b1951d;">()</span> =&gt; app.displayDialog<span style="color: #b1951d;">(</span><span style="color: #2d9574;">`Enter Time Duration for ${goalName} (in hh:mm:ss format):`</span>, <span style="color: #4f97d7;">{</span>
+          withTitle: <span style="color: #2d9574;">"New Recurring Goal - Step 2"</span>,
+          defaultAnswer: <span style="color: #2d9574;">"hh:mm:ss"</span>,
+          withIcon: <span style="color: #2d9574;">"note"</span>,
+          buttons: <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">"I'm Done"</span>, <span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Create Another"</span><span style="color: #bc6ec5;">]</span>,
+          defaultButton: <span style="color: #2d9574;">"Create Another"</span>
+        <span style="color: #4f97d7;">}</span><span style="color: #b1951d;">)</span>, displayDialogRetry<span style="color: #67b11d;">)</span>;
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parse the time given by the text response</span>
+        <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpTime</span> = parseTime<span style="color: #67b11d;">(</span>tmpResponse.textReturned<span style="color: #67b11d;">)</span>;
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #67b11d;">[</span>tmpTime, tmpResponse<span style="color: #67b11d;">]</span>;
+      <span style="color: #2d9574;">}</span>
+      <span style="color: #2d9574;">[</span>goalDuration, goalDurationPromptResult<span style="color: #2d9574;">]</span> = func<span style="color: #2d9574;">()</span>;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">add to the list the new goal</span>
+      recurringGoals.push<span style="color: #2d9574;">(</span><span style="color: #67b11d;">{</span>goal: goalName, duration: goalDuration, priority: priority<span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return the updated list, an increasing priority, and the submission</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">of the goalDurationPromptResult</span>
+      <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">[</span>recurringGoals, priority + <span style="color: #a45bad;">1</span>, goalDurationPromptResult<span style="color: #2d9574;">]</span>;
+    <span style="color: #bc6ec5;">}</span>, <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">[]</span>, <span style="color: #a45bad;">1</span>, <span style="color: #2d9574;">{</span>buttonReturned: <span style="color: #2d9574;">""</span><span style="color: #2d9574;">}</span> <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">for compatability reasons */</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">recurringGoals</span> = JSON.parse<span style="color: #4f97d7;">(</span>app.read<span style="color: #bc6ec5;">(</span>Path<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"/Users/benjaminhansen/Desktop/recurringGoalsJSON.txt"</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">combine the two</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">newRecurringGoalsToSave</span> = recurringGoals.concat<span style="color: #4f97d7;">(</span>newRecurringGoals<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">write the miscellaneous goals to the JSON</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">dateString</span> = Date<span style="color: #4f97d7;">()</span>.toString<span style="color: #4f97d7;">()</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">desktopString</span> = app.pathTo<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"desktop"</span><span style="color: #4f97d7;">)</span>.toString<span style="color: #4f97d7;">()</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">text</span> = <span style="color: #2d9574;">`${JSON.stringify(newRecurringGoalsToSave)}\n`</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">file</span> = <span style="color: #2d9574;">`${desktopString}/recurringGoalsJSON.txt`</span>;
+writeTextToFile<span style="color: #4f97d7;">(</span>text, file, <span style="color: #a45bad;">true</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">true for overwrite</span>
+</pre>
 </div>
-<div id="outline-container-org54b7e65" class="outline-4">
-<h4 id="org54b7e65">Debugging</h4>
-<div class="outline-text-4" id="text-org54b7e65">
+</div>
+</div>
+<div id="outline-container-org3f4e0bf" class="outline-4">
+<h4 id="org3f4e0bf">AddMiscGoals.scpt</h4>
+<div class="outline-text-4" id="text-org3f4e0bf">
+<div class="org-src-container">
+<pre class="src src-js">  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">app</span> = Application.currentApplication<span style="color: #4f97d7;">()</span>;
+app.includeStandardAdditions = <span style="color: #a45bad;">true</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a high-order function to continue prompting the user for input while</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">they "haven't submitted" the form, which will be defined in the funNotSubmitted</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">lambda and called each time until it returns false, denoting the user has submitted</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">untilSubmission</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">funGetInput</span>, <span style="color: #7590db;">funNotSubmitted</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">result</span>;
+  <span style="color: #4f97d7; font-weight: bold;">do</span> <span style="color: #bc6ec5;">{</span> result = funGetInput<span style="color: #2d9574;">()</span>; <span style="color: #bc6ec5;">}</span> <span style="color: #4f97d7; font-weight: bold;">while</span> <span style="color: #bc6ec5;">(</span>funNotSubmitted<span style="color: #2d9574;">(</span>result<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> result;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">generalized until construct</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">allow for use of an accumulator</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">said, "Until condition for accumulator is true, keep calling fun"</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">until</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">condition</span>, <span style="color: #7590db;">fun</span>, <span style="color: #7590db;">accumulator</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">while the condition isn't true, keep iterating</span>
+  <span style="color: #4f97d7; font-weight: bold;">while</span><span style="color: #bc6ec5;">(</span>!condition<span style="color: #2d9574;">(</span>accumulator<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+    accumulator = fun<span style="color: #bc6ec5;">(</span>accumulator<span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> accumulator;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">parseTime</span> = timeString =&gt; <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #bc6ec5;">{</span>hour: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">0</span>,<span style="color: #a45bad;">2</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, minute: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">3</span>,<span style="color: #a45bad;">5</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, second: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">6</span>,<span style="color: #a45bad;">8</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">}</span>; <span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">used for miscJSON.txt</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">writeTextToFile</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">text</span>, <span style="color: #7590db;">file</span>, <span style="color: #7590db;">overwriteExistingContent</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Convert the file to a string</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">fileString</span> = file.toString<span style="color: #2d9574;">()</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Open the file for writing</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">openedFile</span> = app.openForAccess<span style="color: #2d9574;">(</span>Path<span style="color: #67b11d;">(</span>fileString<span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span> writePermission: <span style="color: #a45bad;">true</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Clear the file if content should be overwritten</span>
+        <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>overwriteExistingContent<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            app.setEof<span style="color: #67b11d;">(</span>openedFile, <span style="color: #b1951d;">{</span> to: <span style="color: #a45bad;">0</span> <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Write the new content to the file</span>
+        app.write<span style="color: #2d9574;">(</span>text, <span style="color: #67b11d;">{</span> to: openedFile, startingAt: app.getEof<span style="color: #b1951d;">(</span>openedFile<span style="color: #b1951d;">)</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+        app.closeAccess<span style="color: #2d9574;">(</span>openedFile<span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was successful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">true</span>;
+    <span style="color: #bc6ec5;">}</span>
+    <span style="color: #4f97d7; font-weight: bold;">catch</span> <span style="color: #bc6ec5;">(</span>error<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+            app.closeAccess<span style="color: #67b11d;">(</span>file<span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+        <span style="color: #4f97d7; font-weight: bold;">catch</span><span style="color: #2d9574;">(</span>error<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Report the error is closing failed</span>
+            console.log<span style="color: #67b11d;">(</span><span style="color: #2d9574;">`Couldn't close file: ${error}`</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was unsuccessful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">false</span>;
+    <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a fun for what is true in "not submitted" terms for</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the "chooseFromList" user interface</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">chooseFromListRetry</span> = dialogResult =&gt; dialogResult === <span style="color: #a45bad;">false</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">displayDialogRetry</span> = dialogResult =&gt; dialogResult.buttonReturned === <span style="color: #2d9574;">"Retry"</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">may be empty. if the user hasMiscGoalsToAdd, then call the until function, else return the empty list</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">newMiscGoals</span> =
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">until the user is done creating misc. goals to work on, keep prompting</span>
+  until<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>_m, _p, lastGoalDialogSubmission<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> =&gt; lastGoalDialogSubmission.buttonReturned === <span style="color: #2d9574;">"I'm Done"</span>,
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the main function</span>
+    <span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span>miscGoals, priority, _<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> =&gt; <span style="color: #bc6ec5;">{</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">two prompts. 1: What is the goal name to attach priority to</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">//        </span><span style="color: #2aa1ae; background-color: #292e34;">2: What is the time duration of the goal (hh:mm:ss)</span>
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 1 for the goal name</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">goalName</span> = untilSubmission<span style="color: #2d9574;">(</span><span style="color: #67b11d;">()</span> =&gt; app.displayDialog<span style="color: #67b11d;">(</span><span style="color: #2d9574;">"Enter Goal Title"</span>, <span style="color: #b1951d;">{</span>
+        withTitle: <span style="color: #2d9574;">"New Misc. Goal"</span>,
+        defaultAnswer: <span style="color: #2d9574;">""</span>,
+        withIcon: <span style="color: #2d9574;">"note"</span>,
+        buttons: <span style="color: #4f97d7;">[</span><span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Next"</span><span style="color: #4f97d7;">]</span>,
+        defaultButton: <span style="color: #2d9574;">"Next"</span>
+      <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>, displayDialogRetry<span style="color: #2d9574;">)</span>.textReturned;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">prompt 2 for the goal's time duration (hh:mm:ss)</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parseTime parses text of the form (hh:mm:ss) and returns an object</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">of the form {hour: hh, minute: mm, second: ss}</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">gross code to create a lambda and call it!</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">func</span> = <span style="color: #2d9574;">()</span> =&gt; <span style="color: #2d9574;">{</span>
+        <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpResponse</span> = untilSubmission<span style="color: #67b11d;">(</span><span style="color: #b1951d;">()</span> =&gt; app.displayDialog<span style="color: #b1951d;">(</span><span style="color: #2d9574;">`Enter Time Duration for ${goalName} (in hh:mm:ss format):`</span>, <span style="color: #4f97d7;">{</span>
+          withTitle: <span style="color: #2d9574;">"New Misc. Goal"</span>,
+          defaultAnswer: <span style="color: #2d9574;">"hh:mm:ss"</span>,
+          withIcon: <span style="color: #2d9574;">"note"</span>,
+          buttons: <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">"I'm Done"</span>, <span style="color: #2d9574;">"Retry"</span>, <span style="color: #2d9574;">"Create Another"</span><span style="color: #bc6ec5;">]</span>,
+          defaultButton: <span style="color: #2d9574;">"Create Another"</span>
+        <span style="color: #4f97d7;">}</span><span style="color: #b1951d;">)</span>, displayDialogRetry<span style="color: #67b11d;">)</span>;
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">parse the time given by the text response</span>
+        <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">tmpTime</span> = parseTime<span style="color: #67b11d;">(</span>tmpResponse.textReturned<span style="color: #67b11d;">)</span>;
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #67b11d;">[</span>tmpTime, tmpResponse<span style="color: #67b11d;">]</span>;
+      <span style="color: #2d9574;">}</span>
+      <span style="color: #2d9574;">[</span>goalDuration, goalDurationPromptResult<span style="color: #2d9574;">]</span> = func<span style="color: #2d9574;">()</span>;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">add to the list the new goal</span>
+      miscGoals.push<span style="color: #2d9574;">(</span><span style="color: #67b11d;">{</span>goal: goalName, duration: goalDuration, priority: priority<span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return the updated list, an increasing priority, and the submission</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">of the goalDurationPromptResult</span>
+      <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">[</span>miscGoals, priority + <span style="color: #a45bad;">1</span>, goalDurationPromptResult<span style="color: #2d9574;">]</span>;
+    <span style="color: #bc6ec5;">}</span>, <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">[]</span>, <span style="color: #a45bad;">1</span>, <span style="color: #2d9574;">{</span>buttonReturned: <span style="color: #2d9574;">""</span><span style="color: #2d9574;">}</span> <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">for compatability reasons */</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">misc</span> = JSON.parse<span style="color: #4f97d7;">(</span>app.read<span style="color: #bc6ec5;">(</span>Path<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"/Users/benjaminhansen/Desktop/miscJSON.txt"</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">combine the two</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">miscGoalsToSave</span> = misc.concat<span style="color: #4f97d7;">(</span>newMiscGoals<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">write the miscellaneous goals to the JSON</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">dateString</span> = Date<span style="color: #4f97d7;">()</span>.toString<span style="color: #4f97d7;">()</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">desktopString</span> = app.pathTo<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"desktop"</span><span style="color: #4f97d7;">)</span>.toString<span style="color: #4f97d7;">()</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">text</span> = <span style="color: #2d9574;">`${JSON.stringify(miscGoalsToSave)}\n`</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">file</span> = <span style="color: #2d9574;">`${desktopString}/miscJSON.txt`</span>;
+writeTextToFile<span style="color: #4f97d7;">(</span>text, file, <span style="color: #a45bad;">true</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">true for overwrite</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5471a0a" class="outline-4">
+<h4 id="org5471a0a">ShiftSchedule.scpt</h4>
+<div class="outline-text-4" id="text-org5471a0a">
+<p>
+If I got off of schedule, I can reshift my plans with this script.
+</p>
+<div class="org-src-container">
+<pre class="src src-js">  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">app</span> = Application.currentApplication<span style="color: #4f97d7;">()</span>;
+app.includeStandardAdditions = <span style="color: #a45bad;">true</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">with help from https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/CalendarScriptingGuide/Calendar-LocateanEvent.html#//apple_ref/doc/uid/TP40016646-CH95-SW7</span>
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">Calendar</span> = Application<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"Calendar"</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a high-order function to continue prompting the user for input while</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">they "haven't submitted" the form, which will be defined in the funNotSubmitted</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">lambda and called each time until it returns false, denoting the user has submitted</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">untilSubmission</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">funGetInput</span>, <span style="color: #7590db;">funNotSubmitted</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">result</span>;
+  <span style="color: #4f97d7; font-weight: bold;">do</span> <span style="color: #bc6ec5;">{</span> result = funGetInput<span style="color: #2d9574;">()</span>; <span style="color: #bc6ec5;">}</span> <span style="color: #4f97d7; font-weight: bold;">while</span> <span style="color: #bc6ec5;">(</span>funNotSubmitted<span style="color: #2d9574;">(</span>result<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> result;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">generalized until construct</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">allow for use of an accumulator</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">said, "Until condition for accumulator is true, keep calling fun"</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">until</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">condition</span>, <span style="color: #7590db;">fun</span>, <span style="color: #7590db;">accumulator</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">while the condition isn't true, keep iterating</span>
+  <span style="color: #4f97d7; font-weight: bold;">while</span><span style="color: #bc6ec5;">(</span>!condition<span style="color: #2d9574;">(</span>accumulator<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+    accumulator = fun<span style="color: #bc6ec5;">(</span>accumulator<span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> accumulator;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">parseTime</span> = timeString =&gt; <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #bc6ec5;">{</span>hour: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">0</span>,<span style="color: #a45bad;">2</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, minute: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">3</span>,<span style="color: #a45bad;">5</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>, second: parseInt<span style="color: #2d9574;">(</span>timeString.substring<span style="color: #67b11d;">(</span><span style="color: #a45bad;">6</span>,<span style="color: #a45bad;">8</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">}</span>; <span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">used for miscJSON.txt</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">writeTextToFile</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">text</span>, <span style="color: #7590db;">file</span>, <span style="color: #7590db;">overwriteExistingContent</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Convert the file to a string</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">fileString</span> = file.toString<span style="color: #2d9574;">()</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Open the file for writing</span>
+        <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">openedFile</span> = app.openForAccess<span style="color: #2d9574;">(</span>Path<span style="color: #67b11d;">(</span>fileString<span style="color: #67b11d;">)</span>, <span style="color: #67b11d;">{</span> writePermission: <span style="color: #a45bad;">true</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Clear the file if content should be overwritten</span>
+        <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>overwriteExistingContent<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            app.setEof<span style="color: #67b11d;">(</span>openedFile, <span style="color: #b1951d;">{</span> to: <span style="color: #a45bad;">0</span> <span style="color: #b1951d;">}</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Write the new content to the file</span>
+        app.write<span style="color: #2d9574;">(</span>text, <span style="color: #67b11d;">{</span> to: openedFile, startingAt: app.getEof<span style="color: #b1951d;">(</span>openedFile<span style="color: #b1951d;">)</span> <span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+        app.closeAccess<span style="color: #2d9574;">(</span>openedFile<span style="color: #2d9574;">)</span>;
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was successful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">true</span>;
+    <span style="color: #bc6ec5;">}</span>
+    <span style="color: #4f97d7; font-weight: bold;">catch</span> <span style="color: #bc6ec5;">(</span>error<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">try</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Close the file</span>
+            app.closeAccess<span style="color: #67b11d;">(</span>file<span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+        <span style="color: #4f97d7; font-weight: bold;">catch</span><span style="color: #2d9574;">(</span>error<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Report the error is closing failed</span>
+            console.log<span style="color: #67b11d;">(</span><span style="color: #2d9574;">`Couldn't close file: ${error}`</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return a boolean indicating that writing was unsuccessful</span>
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">false</span>;
+    <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">saves an event to my calendar</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">saveEvent</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">eventTitle</span>, <span style="color: #7590db;">eventStart</span>, <span style="color: #7590db;">duration</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">eventEnd</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Date</span><span style="color: #bc6ec5;">(</span>eventStart.getTime<span style="color: #2d9574;">()</span><span style="color: #bc6ec5;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">make it an end date!</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">time overflows will be taken care of in the set functions</span>
+  eventEnd.setHours<span style="color: #bc6ec5;">(</span>eventStart.getHours<span style="color: #2d9574;">()</span> + duration.hour<span style="color: #bc6ec5;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">in military time</span>
+  eventEnd.setMinutes<span style="color: #bc6ec5;">(</span>eventStart.getMinutes<span style="color: #2d9574;">()</span> + duration.minute<span style="color: #bc6ec5;">)</span>;
+  eventEnd.setSeconds<span style="color: #bc6ec5;">(</span>eventStart.getSeconds<span style="color: #2d9574;">()</span> + duration.second<span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">projectCalendars</span> = Calendar.calendars.whose<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">{</span>name: <span style="color: #2d9574;">"benjamminhansen@gmail.com"</span><span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">projectCalendar</span> = projectCalendars<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span>;
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">event</span> = Calendar.Event<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">{</span>summary: eventTitle, startDate: eventStart, endDate: eventEnd, description: Object.values<span style="color: #67b11d;">(</span>duration<span style="color: #67b11d;">)</span>.reduce<span style="color: #67b11d;">(</span><span style="color: #b1951d;">(</span>str, time<span style="color: #b1951d;">)</span> =&gt; <span style="color: #b1951d;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">strTime</span> = time.toString<span style="color: #4f97d7;">()</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">may only be one char</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">see if we need to pad the number with a zero</span>
+    <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>strTime.length == <span style="color: #a45bad;">1</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+      strTime = <span style="color: #2d9574;">"0"</span> + strTime;
+    <span style="color: #4f97d7;">}</span>
+    str += strTime + <span style="color: #2d9574;">":"</span>;
+    <span style="color: #4f97d7; font-weight: bold;">return</span> str;
+  <span style="color: #b1951d;">}</span>, <span style="color: #2d9574;">""</span><span style="color: #67b11d;">)</span>.slice<span style="color: #67b11d;">(</span><span style="color: #a45bad;">0</span>,-<span style="color: #a45bad;">1</span><span style="color: #67b11d;">)</span><span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">slice off last hanging ':' */</span><span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">)</span>;
+  projectCalendar.events.push<span style="color: #bc6ec5;">(</span>event<span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> eventEnd; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">return the end date of this event we saved</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">a fun for what is true in "not submitted" terms for</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">the "chooseFromList" user interface</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">chooseFromListRetry</span> = dialogResult =&gt; dialogResult === <span style="color: #a45bad;">false</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">displayDialogRetry</span> = dialogResult =&gt; dialogResult.buttonReturned === <span style="color: #2d9574;">"Retry"</span>;
+
+
+
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">startDate</span> = app.currentDate<span style="color: #4f97d7;">()</span>
+startDate = startDate
+startDate.setHours<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">)</span>
+startDate.setMinutes<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">)</span>
+startDate.setSeconds<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">endDate</span> = app.currentDate<span style="color: #4f97d7;">()</span>
+endDate.setHours<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">23</span><span style="color: #4f97d7;">)</span>
+endDate.setMinutes<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">59</span><span style="color: #4f97d7;">)</span>
+endDate.setSeconds<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">59</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">projectCalendars</span> = Calendar.calendars.whose<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">{</span>name: <span style="color: #2d9574;">"benjamminhansen@gmail.com"</span><span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">projectCalendar</span> = projectCalendars<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">events</span> = projectCalendar.events.whose<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">{</span>startDate: <span style="color: #2d9574;">{</span>_greaterThan: startDate<span style="color: #2d9574;">}</span>, endDate: <span style="color: #2d9574;">{</span>_lessThanEquals: endDate<span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>
+<span style="color: #2aa1ae; background-color: #292e34;">/*</span>
+<span style="color: #2aa1ae; background-color: #292e34;">var event1 = events[0]</span>
+<span style="color: #2aa1ae; background-color: #292e34;">var event2 = events[1]</span>
+<span style="color: #2aa1ae; background-color: #292e34;">var event3 = events[2]</span>
+<span style="color: #2aa1ae; background-color: #292e34;">app.displayDialog([event1.description(), event2.description(), event3.description()].toString());*/</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Step 1: Convert the list to a list of summaries, which will be used to access the events</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">goalsToFinish</span> = untilSubmission<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">()</span> =&gt; app.chooseFromList<span style="color: #bc6ec5;">(</span>Array.from<span style="color: #2d9574;">(</span>Array<span style="color: #67b11d;">(</span>events.length<span style="color: #67b11d;">)</span>.keys<span style="color: #67b11d;">()</span><span style="color: #2d9574;">)</span>.map<span style="color: #2d9574;">(</span>index =&gt; events<span style="color: #67b11d;">[</span>index<span style="color: #67b11d;">]</span>.summary<span style="color: #67b11d;">()</span><span style="color: #2d9574;">)</span>, <span style="color: #2d9574;">{</span>
+    withPrompt: <span style="color: #2d9574;">"Which remaining goals do you want to accomplish from now on?"</span>,
+    withTitle: <span style="color: #2d9574;">"Choose Events to Shift"</span>,
+    emptySelectionAllowed: <span style="color: #a45bad;">false</span>,
+    multipleSelectionsAllowed: <span style="color: #a45bad;">true</span>,
+    okButtonName: <span style="color: #2d9574;">"Shift"</span>,
+    cancelButtonName: <span style="color: #2d9574;">"Retry"</span>
+<span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">)</span>, chooseFromListRetry<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">goalsToShift</span> = goalsToFinish.reduce<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span>goals, goalName<span style="color: #bc6ec5;">)</span>=&gt; <span style="color: #bc6ec5;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">app.displayDialog(events.whose({summary: goalName})[0].description());</span>
+  goals.push<span style="color: #2d9574;">(</span><span style="color: #67b11d;">{</span>goal: goalName, duration: parseTime<span style="color: #b1951d;">(</span>events.whose<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">{</span>summary: goalName<span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>.description<span style="color: #4f97d7;">()</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">}</span><span style="color: #2d9574;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> goals;
+<span style="color: #bc6ec5;">}</span>, <span style="color: #bc6ec5;">[]</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">run our Applescript Script to delete events where their</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">end date is within now to midnight. Avoid duplicates!</span>
+app.runScript<span style="color: #4f97d7;">(</span>Path<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"/../Downloads/DeleteFromAnHourAgoUntilMidnight.scpt"</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>;
+
+
+goalsToShift.reduce<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span>eventStart, Goal<span style="color: #bc6ec5;">)</span> =&gt; <span style="color: #bc6ec5;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> saveEvent<span style="color: #2d9574;">(</span>Goal.goal, eventStart, Goal.duration<span style="color: #2d9574;">)</span>;
+  <span style="color: #bc6ec5;">}</span>, app.currentDate<span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb9b4407" class="outline-4">
+<h4 id="orgb9b4407">Goal Scheduler.scpt</h4>
+<div class="outline-text-4" id="text-orgb9b4407">
+<p>
+A menu-based interface for the user to choose which application to run
+</p>
+<div class="org-src-container">
+<pre class="src src-js">  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">with help from the second post in https://stackoverflow.com/questions/28773207/how-to-get-posix-path-of-the-current-scripts-folder-in-javascript-for-automatio</span>
+ObjC.<span style="color: #4f97d7; font-weight: bold;">import</span><span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"Cocoa"</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">app</span> = Application.currentApplication<span style="color: #4f97d7;">()</span>
+app.includeStandardAdditions = <span style="color: #a45bad;">true</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">thePath</span> = app.pathTo<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">this</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">use ObjC components</span>
+<span style="color: #4f97d7; font-weight: bold;">var</span> <span style="color: #7590db;">thePathStr</span> = $.NSString.alloc.init;
+thePathStr = $.NSString.alloc.initWithUTF8String<span style="color: #4f97d7;">(</span>thePath<span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">thePathStrDir</span> = <span style="color: #4f97d7;">(</span>thePathStr.stringByDeletingLastPathComponent<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">coerce to a JS string with .js</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">fullPathToApp</span> = thePathStrDir.js + <span style="color: #2d9574;">"/"</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">chooseFromListCancel</span> = dialogResult =&gt; dialogResult === <span style="color: #a45bad;">false</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">generalized until construct</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">allow for use of an accumulator</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">said, "Until condition for accumulator is true, keep calling fun"</span>
+<span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">until</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">condition</span>, <span style="color: #7590db;">fun</span>, <span style="color: #7590db;">accumulator</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">while the condition isn't true, keep iterating</span>
+  <span style="color: #4f97d7; font-weight: bold;">while</span><span style="color: #bc6ec5;">(</span>!condition<span style="color: #2d9574;">(</span>accumulator<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+    accumulator = fun<span style="color: #bc6ec5;">(</span>accumulator<span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> accumulator;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">dynamicSchedule</span> = <span style="color: #4f97d7;">()</span> =&gt; app.runScript<span style="color: #4f97d7;">(</span>fullPathToApp + <span style="color: #2d9574;">"DynamicSchedule.scpt"</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">shiftSchedule</span> = <span style="color: #4f97d7;">()</span> =&gt; app.runScript<span style="color: #4f97d7;">(</span>fullPathToApp + <span style="color: #2d9574;">"DynamicSchedule.scpt"</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">addMiscGoals</span> = <span style="color: #4f97d7;">()</span> =&gt; app.runScript<span style="color: #4f97d7;">(</span>fullPathToApp + <span style="color: #2d9574;">"AddMiscGoals.scpt"</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">addRecurringGoals</span> = <span style="color: #4f97d7;">()</span> =&gt; app.runScript<span style="color: #4f97d7;">(</span>fullPathToApp + <span style="color: #2d9574;">"AddRecurringGoals.scpt"</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">calConsumer</span> = <span style="color: #4f97d7;">()</span> =&gt; app.runScript<span style="color: #4f97d7;">(</span>fullPathToApp + <span style="color: #2d9574;">"CalConsumer.scpt"</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">scriptOptions</span> = <span style="color: #4f97d7;">{</span>
+  <span style="color: #2d9574;">"Generate Today's Dynamic Schedule"</span>: dynamicSchedule,
+  <span style="color: #2d9574;">"Shift Schedule"</span>: shiftSchedule,
+  <span style="color: #2d9574;">"Add Misc. Goals"</span>: addMiscGoals,
+  <span style="color: #2d9574;">"Add Recurring Goals"</span>: addRecurringGoals,
+  <span style="color: #2d9574;">"Calorie Consumer"</span>: calConsumer
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">promptForAppToRun</span> = <span style="color: #4f97d7;">()</span> =&gt;
+  app.chooseFromList<span style="color: #4f97d7;">(</span>Object.keys<span style="color: #bc6ec5;">(</span>scriptOptions<span style="color: #bc6ec5;">)</span>, <span style="color: #bc6ec5;">{</span>
+    withTitle: <span style="color: #2d9574;">"Goal Scheduler Menu"</span>,
+    withPrompt: <span style="color: #2d9574;">"Applications:"</span>,
+    defaultItems: <span style="color: #2d9574;">[</span><span style="color: #2d9574;">"Generate Today's Dynamic Schedule"</span><span style="color: #2d9574;">]</span>,
+    emptySelectionAllowed: <span style="color: #a45bad;">false</span>,
+    multipleSelectionsAllowed: <span style="color: #a45bad;">false</span>,
+    okButtonName: <span style="color: #2d9574;">"Run"</span>,
+    cancelButtonName: <span style="color: #2d9574;">"Quit"</span>
+  <span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">runAppIfDesired</span> = <span style="color: #4f97d7;">(</span>_<span style="color: #4f97d7;">)</span> =&gt; <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">dialogResult</span> = app.chooseFromList<span style="color: #bc6ec5;">(</span>Object.keys<span style="color: #2d9574;">(</span>scriptOptions<span style="color: #2d9574;">)</span>, <span style="color: #2d9574;">{</span>
+      withTitle: <span style="color: #2d9574;">"Goal Scheduler Menu"</span>,
+      withPrompt: <span style="color: #2d9574;">"Applications:"</span>,
+      defaultItems: <span style="color: #67b11d;">[</span><span style="color: #2d9574;">"Generate Today's Dynamic Schedule"</span><span style="color: #67b11d;">]</span>,
+      emptySelectionAllowed: <span style="color: #a45bad;">false</span>,
+      multipleSelectionsAllowed: <span style="color: #a45bad;">false</span>,
+      okButtonName: <span style="color: #2d9574;">"Run"</span>,
+      cancelButtonName: <span style="color: #2d9574;">"Quit"</span>
+    <span style="color: #2d9574;">}</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>dialogResult<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span> <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">is true</span>
+    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">there is only one list item. Run it's corresponding application script</span>
+    scriptOptions<span style="color: #2d9574;">[</span>dialogResult<span style="color: #67b11d;">[</span><span style="color: #a45bad;">0</span><span style="color: #67b11d;">]</span><span style="color: #2d9574;">]()</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">run the function</span>
+  <span style="color: #bc6ec5;">}</span>
+  <span style="color: #4f97d7; font-weight: bold;">return</span> dialogResult;
+<span style="color: #4f97d7;">}</span>
+
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">keep looping until the user is done (quits the menu app)</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">go until the user hits "Quit"</span>
+until<span style="color: #4f97d7;">(</span>chooseFromListCancel,
+  runAppIfDesired,
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">initial accumulator result</span>
+  runAppIfDesired<span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org486dc2d" class="outline-2">
+<h2 id="org486dc2d">Blog</h2>
+<div class="outline-text-2" id="text-org486dc2d">
+</div>
+<div id="outline-container-org17cdf0e" class="outline-3">
+<h3 id="org17cdf0e"><span class="timestamp-wrapper"><span class="timestamp">&lt;2020-07-24 Fri&gt;</span></span></h3>
+<div class="outline-text-3" id="text-org17cdf0e">
+</div>
+<div id="outline-container-orgb58ea46" class="outline-4">
+<h4 id="orgb58ea46">Debugging</h4>
+<div class="outline-text-4" id="text-orgb58ea46">
 <p>
 Today I was doing quick coding in JavaScript, working on my Summer side project you can view here: <a href="https://benjaminrhansen.github.io/Portfolio/#outline-container-org4ad206c">Automate Summer Workflow</a>.
 It was all going fairly well until I created a whole block of code I understood logically would work (or should, because it made
@@ -388,9 +1417,9 @@ I thought, what is this doing here? How did it still run once and then quit. It 
 </p>
 </div>
 </div>
-<div id="outline-container-orgb0710f8" class="outline-4">
-<h4 id="orgb0710f8">Code Snippet before</h4>
-<div class="outline-text-4" id="text-orgb0710f8">
+<div id="outline-container-org0e0b732" class="outline-4">
+<h4 id="org0e0b732">Code Snippet before</h4>
+<div class="outline-text-4" id="text-org0e0b732">
 <div class="org-src-container">
 <pre class="src src-js"><span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">keep prompting for the desired order until the reamainingGoals array is</span>
 <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">empty</span>
@@ -423,9 +1452,9 @@ I thought, what is this doing here? How did it still run once and then quit. It 
 </div>
 </div>
 </div>
-<div id="outline-container-org9943b6d" class="outline-4">
-<h4 id="org9943b6d">Code Snippet after</h4>
-<div class="outline-text-4" id="text-org9943b6d">
+<div id="outline-container-org501d3f5" class="outline-4">
+<h4 id="org501d3f5">Code Snippet after</h4>
+<div class="outline-text-4" id="text-org501d3f5">
 <div class="org-src-container">
 <pre class="src src-js"><span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">keep prompting for the desired order until the reamainingGoals array is</span>
 <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">empty</span>
