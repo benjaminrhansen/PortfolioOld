@@ -71,7 +71,7 @@
 * About
   [[file:linkedinprofilecircle.png][file:./linkedinprofilecircle.png]]
 | [[https://linkedin.com/in/benjaminrhansen][LinkedIn Profile]]  | [[file:BenjaminRHansenResume.pdf][Resume]] | [[https://github.com/benjaminrhansen][GitHub Profile]]  |
-*** Self Introduction                                              :noexport:
+*** Self Introduction
   Hi! I'm Benjamin Hansen. I am from Southern Utah. I became interested in computer science in high school where I took 5 computer courses. I went on a mission for my church, [[https://churchofjesuschrist.org][The Church of Jesus Christ of Latter-day Saints]], worked construction for 4 months, and then started my Bachelor's of Science in Computer Science at [[https://www.byui.edu/][Brigham Young University - Idaho]]. I chose Computer Science because I found I liked from my web design and development course and programming course in high school. What really brought me confidence that I could do well in this field was from acheiving the highest grade on the final exam of my programming class.
 
   Ever since, programming paradigms and concepts have come easily to me. I can quickly learn languages and write programs in them. What I really love is Erlang. I feel like Erlang is almost as easy as Python. My initial solution to a problem is not hard to implement in Erlang, whereas in other languages it may take many revisions to my initial solution to solve the problem. I've created many modules with many functions in Erlang, for a class and on my free time. I prefer doing mathematical alogirhtms and functions in Erlang. I love its scalability and simplicity.
