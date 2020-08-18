@@ -62,13 +62,6 @@
       (end-of-line)
       (org-set-tags "noexport")))
 #+end_src
-#+begin_src elisp
-  (commit-and-push-all "Upload All")
-#+end_src
-
-#+results:
-: To github.com:benjaminrhansen/Portfolio.git
-:    3f1dca6..9bf8a64  master -> master
 
 ** Links
 
