@@ -24,13 +24,18 @@
 #+begin_src elisp :results silent
   (defun commit-and-push-all (&optional commit-message)
     (setq commit-message (or commit-message "New Upload."))
-    (let ((git-repo "."))
+    (let ((git-repo ".")
+          (all-files-to-push '(
+            "docs/index.html"
+            "docs/BenjaminRHansenResume.pdf"
+            "index.txt"
+            "docs/theme-bigblow.setup"))
+         )
       (copy-file "../Resumes/BenjaminRHansenResume.pdf" "docs/BenjaminRHansenResume.pdf" t)
+      (copy-file "theme-bigblow.setup" "docs/theme-bigblow.setup" t)
       (git-add
-       "docs/index.html"
-       "docs/BenjaminRHansenResume.pdf"
-       "index.txt")
-      (git-commit commit-message "docs/index.html" "docs/BenjaminRHansenResume.pdf" "index.txt")
+        all-files-to-push)
+      (git-commit commit-message all-files-to-push)
       (git-fetch "origin")
       (git-push "origin" "master")))
 #+end_src
@@ -58,7 +63,7 @@
       (org-set-tags "noexport")))
 #+end_src
 #+begin_src elisp
-  (add-all-noexport-on-todos)
+  (commit-and-push-all "Upload All")
 #+end_src
 
 #+results:
