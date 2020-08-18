@@ -32,8 +32,13 @@
       (git-push "origin" "master")))
 #+end_src
 #+begin_src elisp
-  (commit-and-push-all)
+  (commit-and-push-to-repo "docs/" "Upload docs")
 #+end_src
+
+#+results:
+: To github.com:benjaminrhansen/Portfolio.git
+:    409d88e..5d7366a  master -> master
+
 #+begin_src elisp :results silent
   (defun remove-all-todos-and-tags ()
     (while (sp--search-forward-regexp "TODO")
@@ -1122,8 +1127,17 @@ until(chooseFromListCancel,
 *** TODO Make Inference                                            :noexport:
 *** TODO Take Action                                               :noexport:
 ** TODO Team Lead for Team of 5 in Class-wide Project              :noexport:
-* TODO Research                                                    :noexport:
-** TODO Research & Creative Works Conference                       :noexport:
+* Research
+** Research & Creative Works Conference
+  As another side project (February 2020), I wanted to apply the frequent pondering on facoring I had done over the past year, which had increased the past 4 months because of my discrete mathematics teaching to students as a tutor and TA. I researched a proof for the conjecture I had that to find the next integer factor of a number and test if it's factor, one could simply subract from the last factor checked the division of that previous factor and the current integer.
+
+  The research is presented in the form of a website on my GitHub.io here: https://benjaminrhansen.github.io/Theorem/.
+*** Theorem
+    Let \(n \in \mathbb{n}\) For \(k\) = 1, \dots, \(\lfloor\sqrt{n}\rfloor\), let \(a_k\) be the real number
+  such that \(a_{k}k = n\). The numbers \(a_1, a_2, \dots, a_{\lfloor\sqrt{n}\rfloor}\) satisfy the recurrence relation
+
+  \(a_k = a_{k-1} \)\minus\( \frac{a_{k-1}}{k}\)
+
 ** TODO Fractional Library                                         :noexport:
 ** Multithreading: How many threads? - White Paper
    In my Operating Systems class, our final project was a research paper on how many threads are needed for a given program to maximize performance.
