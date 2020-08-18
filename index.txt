@@ -26,7 +26,10 @@
     (setq commit-message (or commit-message "New Upload."))
     (let ((git-repo "."))
       (copy-file "../Resumes/BenjaminRHansenResume.pdf" "docs/BenjaminRHansenResume.pdf" t)
-      (git-add "docs/index.html" "docs/BenjaminRHansenResume.pdf" "index.txt")
+      (git-add
+       "docs/index.html"
+       "docs/BenjaminRHansenResume.pdf"
+       "index.txt")
       (git-commit commit-message "docs/index.html" "docs/BenjaminRHansenResume.pdf" "index.txt")
       (git-fetch "origin")
       (git-push "origin" "master")))
