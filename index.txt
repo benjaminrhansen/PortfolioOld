@@ -53,7 +53,7 @@
       (end-of-line)
       (org-set-tags "")
       (org-todo "")))
-  (defun remove-all-noexport-on-todos ()
+      (defun remove-all-noexport-on-todos ()
     (while (sp--search-forward-regexp "TODO")
       (end-of-line)
       (org-set-tags "")))
@@ -1265,3 +1265,34 @@ I thought, what is this doing here? How did it still run once and then quit. It 
                 // give todaysGoals list with the first goal as priority one and the empty list to build the ordered goals from
             }, [todaysGoals, 1, []])[2]; // return from the until returned list the third item, the ordered goals!
 #+end_src
+** <2020-08-18 Wed>
+   The RSA cryptosystem works so beautifully but I wanted to see the mathematical theory behind the guarantee that the encryption and then decryption of any encoded message will result in the original message. Here is a proof I made to verify that the message is preserved when encrypted and then decrypted.
+
+  Recall the "players" (variables) of RSA encryption. This table was created by Rick Neff in [[https://rickneff.github.io/metaphors-be-with-you.html#outline-container-org844de28][Metaphor's Be With You]] under section "Two".
+
+
+| Who | What                    | Roles/Relationships                                                 |
+|-----+-------------------------+---------------------------------------------------------------------|
+| m   | message (plaintext)     | decrypted c: m = c^d % n                                             |
+| c   | ciphertext              | encrypted m: c = m^e % n                                             |
+| p   | a large prime           | where “large” is relative                                           |
+| q   | another large prime     | different than p, but with the same number of digits (more or less) |
+| n   | the modulus             | the product of p and q: must be bigger than m                       |
+| t   | the totient             | the product of p - 1 and q - 1                                      |
+| e   | the encryption exponent | must be coprime to t, typically 65537 (216 + 1)                     |
+| d   | the decryption exponent | TUMMI (mod t) of e                                                  |
+From Metaphor's Be With You - Rick Neff.
+
+  I want to prove that \(m\) really does equal \(c^d \text{ mod } n\).
+
+  Since \(c = m^e \text{ mod } n\)
+\begin{aligned}
+  c^d \text{ mod } n &= (m^e \text{ mod } n)^d \text{ mod } n \\
+     &=(m^e \text{ mod } n) \times (m^e \text{ mod } n) \times \cdots (d \text{ times})
+     &=(m^e \text{ mod } n \times \cdots (d \text{ times})) \times (m^e \text{ mod } n \times \cdots (d \text{ times})) \text{ by the distributivity of modular arithmetic}
+     &=m^{e+e+\cdots(d \text{ times})}\text{ mod } n \text{ by the property of reflexivity}
+     &=m^{e\cdot d}\text{ mod } n
+     &=m^{e\cdot d \text{ mod }n}\text{ mod }n \text{ by the fact that } \forall a, k, b \in \mathbb{N} : a^k \text{ mod} b \equiv a^{k \text{ mod} b}\text{ mod}b
+     &=m
+\end{aligned}
+This last simplification needs some explanation, which I will explain hopefully soon...
