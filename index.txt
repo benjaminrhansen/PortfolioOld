@@ -91,11 +91,7 @@
      - JavaScript
      - Python
 **** A Longer Intro.
-  Hi! I'm Benjamin Hansen. I am from Southern Utah. I became interested in computer science in high school where I took 5 computer courses. I went on a mission for my church, [[https://churchofjesuschrist.org][The Church of Jesus Christ of Latter-day Saints]], in Georgia, worked construction for 4 months, and then started my Bachelor's of Science in Computer Science at [[https://www.byui.edu/][Brigham Young University - Idaho]]. I chose Computer Science because of how it peaked my interest in my web design & development and programming course in high school. What really brought me confidence that I could do well in this field was from achieving the highest grade on the final exam of my entire programming class.
-
-  Ever since, programming paradigms and concepts have come easily to me. I can quickly learn languages and write programs in them. What I really love is Erlang. I feel like Erlang is almost as easy as Python. My initial solution to a problem is not hard to implement in Erlang, whereas in other languages it may take many revisions to my initial solution to solve the problem. I've created many modules with many functions in Erlang, for a class and on my free time. I prefer doing mathematical algorithms and functions in Erlang. I love its scalability and simplicity.
-
-  I've also used my C++ knowledge in 5 semesters of courses. After learning Python during my Machine Learning course, I learned R within a short span of time to do the final project. I feel confident I can learn any software and accomplish any task given to me.
+**** My Beginnings
 
 
 ** TODO References                                                 :noexport:
@@ -1288,11 +1284,18 @@ From Metaphor's Be With You - Rick Neff.
   Since \(c = m^e \text{ mod } n\)
 \begin{aligned}
   c^d \text{ mod } n &= (m^e \text{ mod } n)^d \text{ mod } n \\
-     &=(m^e \text{ mod } n) \times (m^e \text{ mod } n) \times \cdots (d \text{ times})
-     &=(m^e \text{ mod } n \times \cdots (d \text{ times})) \times (m^e \text{ mod } n \times \cdots (d \text{ times})) \text{ by the distributivity of modular arithmetic}
-     &=m^{e+e+\cdots(d \text{ times})}\text{ mod } n \text{ by the property of reflexivity}
-     &=m^{e\cdot d}\text{ mod } n
-     &=m^{e\cdot d \text{ mod }n}\text{ mod }n \text{ by the fact that } \forall a, k, b \in \mathbb{N} : a^k \text{ mod} b \equiv a^{k \text{ mod} b}\text{ mod}b
+     &=(m^e \text{ mod } n) \times (m^e \text{ mod } n) \times \cdots (d \text{ times}) \\
+     &=(m^e \text{ mod } n \times \cdots (d \text{ times})) \times (m^e \text{ mod } n \times \cdots (d \text{ times})) \text{ by the distributivity of modular arithmetic} \\
+     &=m^{e+e+\cdots(d \text{ times})}\text{ mod } n \text{ by the property of reflexivity} \\
+     &=m^{e\cdot d}\text{ mod } n \\
+     &=m^{e\cdot d \text{ mod }n}\text{ mod }n \text{ by the fact that } \forall a, k, b \in \mathbb{N} : a^k \text{ mod} b \equiv a^{k \text{ mod} b}\text{ mod}b \\
      &=m
 \end{aligned}
 This last simplification needs some explanation, which I will explain hopefully soon...
+* About
+** My Beginnings
+  Hi! I'm Benjamin Hansen. I am from Southern Utah. I became interested in computer science in high school where I took 5 computer courses. I went on a mission for my church, [[https://churchofjesuschrist.org][The Church of Jesus Christ of Latter-day Saints]], in Georgia, worked construction for 4 months, and then started my Bachelor's of Science in Computer Science at [[https://www.byui.edu/][Brigham Young University - Idaho]]. I chose Computer Science because of how it peaked my interest in my web design & development and programming course in high school. What really brought me confidence that I could do well in this field was from achieving the highest grade on the final exam of my entire programming class.
+
+  Ever since, programming paradigms and concepts have come easily to me. I can quickly learn languages and write programs in them. What I really love is Erlang. I feel like Erlang is almost as easy as Python. My initial solution to a problem is not hard to implement in Erlang, whereas in other languages it may take many revisions to my initial solution to solve the problem. I've created many modules with many functions in Erlang, for a class and on my free time. I prefer doing mathematical algorithms and functions in Erlang. I love its scalability and simplicity.
+
+  I've also used my C++ knowledge in 5 semesters of courses. After learning Python during my Machine Learning course, I learned R within a short span of time to do the final project. I feel confident I can learn any software and accomplish any task given to me.
